@@ -3,10 +3,8 @@
         Input a value for inch: 1000
         Expected Output :
         1000.0 inch is 25.4 meters*/
-
 package Lesson1;
 import java.util.Scanner;
-
 public class Task1 {
     public static void main(String[] args) {
         Task1.convert();
@@ -17,6 +15,6 @@ public class Task1 {
         float inches = input.nextFloat();
         float ratio = 0.0254f;
         float meters = inches*ratio;
-        System.out.println("Expected Output : " + inches + " inch is " + meters + " meters");
+        System.out.println("Expected Output : " + inches + " inch is " + meters + " meters"); // how to set decimal place count ?
     }
 }
