@@ -19,7 +19,7 @@ public class Task3 {
             System.out.println(myInteger+" minutes is approximately "+years+" years and " +days+" days");
         }
         catch (Exception e) {
-            System.out.println("This is not integer!");
+            System.out.println("Please input round number!");
         }
     }
 }

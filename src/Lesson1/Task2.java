@@ -20,7 +20,7 @@ public class Task2 {
             System.out.println("The sum of all digits in " + myInteger + " is " + sumOfDigits );
         }
         catch (Exception e) {
-            System.out.println("This is not integer!");
+            System.out.println("Please input round number!");
         }
     }
 }

@@ -24,7 +24,7 @@ public class Task4 {
             System.out.println("Current Time is: " + hoursWithOffset+ ":" +minutes+":"+seconds);
         }
         catch (Exception e) {
-            System.out.println("This is not integer!");
+            System.out.println("Please input round number!");
         }
     }
 }
