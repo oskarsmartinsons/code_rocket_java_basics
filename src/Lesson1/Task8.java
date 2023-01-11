@@ -27,6 +27,7 @@ public class Task8 {
             int difference = Math.subtractExact(myFirstInteger,mySecondInteger);
             int product = Math.multiplyExact(myFirstInteger,mySecondInteger);
             float average = (myFirstInteger+mySecondInteger)/2;
+            float differeceDistance = Math.abs(difference);
             int largest = Math.max(myFirstInteger,mySecondInteger);
             int smallest = Math.min(myFirstInteger,mySecondInteger);
 
@@ -35,7 +36,7 @@ public class Task8 {
             System.out.println("Difference of two integers: "  + difference);
             System.out.println("Product of two integers: "  + product);
             System.out.println("Average of two integers: "  + average);
-            System.out.println("Distance of two integers: "  + difference);
+            System.out.println("Distance of two integers: "  + differeceDistance);
             System.out.println("Max integer: "  + largest);
             System.out.println("Min interger "  + smallest);
         }
