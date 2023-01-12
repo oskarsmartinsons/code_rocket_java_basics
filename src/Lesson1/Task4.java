@@ -14,6 +14,7 @@ public class Task4 {
             Scanner input=new Scanner(System.in);
             System.out.println("Input the time zone offset to GMT: ");
             long offset = input.nextLong();
+            // solution using class Date and method getTime() method
             long milliSeconds = new Date().getTime();
             long inSeconds = milliSeconds / 1000;
             long inMinutes = inSeconds / 60;
@@ -21,7 +22,8 @@ public class Task4 {
             long seconds = inSeconds%60;
             long minutes = inMinutes%60;
             long hoursWithOffset = ((inHours+offset)%24);
-            System.out.println("Current Time is: " + hoursWithOffset+ ":" +minutes+":"+seconds);
+            //print out time
+            System.out.printf("Current Time is: %02d:%02d:%02d", hoursWithOffset, minutes, seconds);
         }
         catch (Exception e) {
             System.out.println("Please input round number!");

@@ -37,7 +37,7 @@ public class Task6 {
             float speedInKilometersHours= (distance / timeInSeconds) * 3600 / 1000;
             float speedInMilesHours = (float) (speedInKilometersHours / 1.609);
             // print out
-            System.out.println("Your speed in meters/second is "  + speedInMetersSeconds);
+            System.out.print("Your speed in meters/second is "  + speedInMetersSeconds);
             System.out.println("Your speed in kilometers/hours is "  + speedInKilometersHours);
             System.out.println("Your speed in miles/hours is "  + speedInMilesHours);
         }

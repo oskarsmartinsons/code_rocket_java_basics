@@ -17,10 +17,10 @@ public class Task7 {
             double square = Math.pow(myNumber,2);
             double cube = Math.pow(myNumber,3);
             double fourth =  Math.pow(myNumber,4);
-            // print out
-            System.out.println("Square: "  + square);
-            System.out.println("Cube: "  + cube);
-            System.out.println("Fourth power: "  + fourth);
+            // print put with 2 decimal places
+            System.out.printf("Square %.2f %n", square);
+            System.out.printf("Cube %.2f %n", cube);
+            System.out.printf("Fourth %.2f %n", fourth);
         }
         catch (Exception e) {
             System.out.println("Please input correct numbers!");
