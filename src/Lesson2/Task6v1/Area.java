@@ -5,16 +5,15 @@ import java.util.Scanner;
 public class Area {
     private double length;
     private double breadth;
-    public Area (double length, double breadth) {
-        this.length = length;
-        this.breadth = breadth;
-    }
     public double getLength() {
         return length;
     }
     public double getBreadth() {
         return breadth;
     }
+    public void setLength(double length) {this.length = length;}
+    public void setBreadth(double breadth) {this.breadth = breadth;}
+
     public static double getArea(double length, double breadth) {
         return length*breadth;
     }
