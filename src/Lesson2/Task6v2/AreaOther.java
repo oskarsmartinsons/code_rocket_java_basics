@@ -3,8 +3,8 @@ package Lesson2.Task6v2;
 import java.util.Scanner;
 
 public class AreaOther {
-    private double length;
-    private double breadth;
+    private final double length;
+    private final double breadth;
     public double getLength() {
         return length;
     }

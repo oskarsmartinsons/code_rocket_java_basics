@@ -3,9 +3,9 @@ package Lesson2.Task3;
 import static java.lang.Math.sqrt;
 
 public class Triangle {
-    double side1;
-    double side2;
-    double side3;
+    private double side1;
+    private double side2;
+    private double side3;
     public double getSide1() {
         return side1;
     }
