@@ -1,8 +1,7 @@
 package Lesson2.Task6v1;
-
 import java.util.Scanner;
 
-public class Area {
+class Area {
     private double length;
     private double breadth;
     public double getLength() {
@@ -14,10 +13,11 @@ public class Area {
     public void setLength(double length) {this.length = length;}
     public void setBreadth(double breadth) {this.breadth = breadth;}
 
-    public static double getArea(double length, double breadth) {
+    double getArea(double length, double breadth) {
+
         return length*breadth;
     }
-    public static double[] setDim( ) {
+    double[] setDim( ) {
         // input length
         Scanner side1 = new Scanner(System.in);
         System.out.println("Enter rectangular length: ");

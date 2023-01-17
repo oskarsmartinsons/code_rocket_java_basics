@@ -1,12 +1,12 @@
 package Lesson2.Task5;
 
-public class Rectangle {
+class Rectangle {
     private final double length;
     private final double breadth;
 
     public Rectangle (double sideA, double sideB) {
-        this.length =sideA;
-        this.breadth =sideB;
+        this.length=sideA;
+        this.breadth=sideB;
     }
     public double getLength() {
         return length;
@@ -16,7 +16,7 @@ public class Rectangle {
     }
 
     // calculate area
-    static double calculateArea(Rectangle rectangle) {
-        return rectangle.getLength()*rectangle.getBreadth();
+    double calculateArea() {
+        return length*breadth;
     }
 }
