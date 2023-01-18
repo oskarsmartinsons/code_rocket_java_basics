@@ -6,7 +6,6 @@ public class InvestmentCalculatorDemo {
         double investment = UserInput.inputInvestment();
         double rate = UserInput.inputROI();
         InvestmentCalculator investmentCalculator = new InvestmentCalculator(years, investment, rate);
-      //  investmentCalculator.calculateFutureInvestment();
         investmentCalculator.printInvestmentGraph();
     }
 }
