@@ -1,4 +1,4 @@
-package Lesson2.Task34;
+package Lesson2.Task33;
 
 class InvestmentCalculator {
     private final int years;

@@ -1,4 +1,4 @@
-package Lesson2.Task33;
+package Lesson2.Task32_duplicate;
 
 public class PentagonDemo {
     public static void main(String[] args) {

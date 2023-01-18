@@ -1,6 +1,5 @@
-package Lesson2.Task34;
+package Lesson2.Task33;
 
-import java.math.BigDecimal;
 import java.util.Scanner;
 
 class UserInput {
