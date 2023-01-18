@@ -2,7 +2,7 @@ package Lesson2.Task36;
 
 import java.util.Scanner;
 
-public class UserInput {
+class UserInput {
     static String inputPassword() {
         Scanner input = new Scanner(System.in);
         System.out.println("1. A password must have at least eight characters.");
