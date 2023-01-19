@@ -1,11 +1,11 @@
-package Lesson2.Task35;
+package Lesson3.Task13;
 
 import java.util.Scanner;
 
 class UserInput {
-    static int inputYear() {
+    int inputNumber() {
         Scanner input = new Scanner(System.in);
-        System.out.println("Input year: ");
+        System.out.println("Input number of terms :  ");
         return input.nextInt();
     }
 }

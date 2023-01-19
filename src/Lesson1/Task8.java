@@ -26,7 +26,7 @@ public class Task8 {
             int sum = Math.addExact(myFirstInteger,mySecondInteger);
             int difference = Math.subtractExact(myFirstInteger,mySecondInteger);
             int product = Math.multiplyExact(myFirstInteger,mySecondInteger);
-            float average = (myFirstInteger+mySecondInteger)/2;
+            float average = ((float)(myFirstInteger+mySecondInteger))/2;
             float differeceDistance = Math.abs(difference);
             int largest = Math.max(myFirstInteger,mySecondInteger);
             int smallest = Math.min(myFirstInteger,mySecondInteger);
