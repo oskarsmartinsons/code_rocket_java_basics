@@ -9,9 +9,9 @@ class Comparator {
         System.out.println(numberOne);
         System.out.println(numberTwo);
         if (numberOne.equals(numberTwo)) {
-            System.out.println("True");
+            System.out.println("They are the same");
         } else {
-            System.out.println("False");
+            System.out.println("They are different");
         }
     };
 }
