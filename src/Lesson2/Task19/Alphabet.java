@@ -38,6 +38,8 @@ class Alphabet {
         }
         return sortedMap;
     }
+
+    // Printing without using Lambda
     void printHaspMap (HashMap<Character,Integer> myMap) {
         for (Map.Entry<Character, Integer> m : myMap.entrySet()) {
             // Printing
@@ -45,4 +47,13 @@ class Alphabet {
             System.out.println(m.getValue());
         }
     }
+
+    //  Printing with using Lambda
+    void printWithLambda(HashMap<Character,Integer> myMap) {
+        myMap.forEach((c,i)->printRow(c,i));
+    }
+    void printRow (Character c, Integer i) {
+        System.out.println(c + ":" + i);
+    }
+
 }

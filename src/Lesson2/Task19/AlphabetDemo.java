@@ -13,5 +13,8 @@ public class AlphabetDemo {
         // print sorted
         System.out.println("---- Sorted ----");
         alphabet.printHaspMap(sorted);
+
+        System.out.println("---- Sorted (printed with Lambda)---");
+        alphabet.printWithLambda(sorted);
     }
 }
