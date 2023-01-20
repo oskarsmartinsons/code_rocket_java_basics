@@ -15,12 +15,10 @@ public class MatrixDemo {
         secondMatrix.setElement(1,0,3);
         secondMatrix.setElement(1,1,4);
 
-        Matrix result=firstMatrix.adding(secondMatrix);
-        for (int i = 0; i < result.getColumns(); i++) {
-            for (int j = 0; j < result.getRows(); j++) {
-                System.out.print(result.getElement(i, j)+" ");
-            }
-            System.out.println();
-        }
+        Matrix resultSum=firstMatrix.adding(secondMatrix);
+        resultSum.printMatrix();
+
+        Matrix resultMultiplication=firstMatrix.multiply(secondMatrix);
+        resultMultiplication.printMatrix();
     }
 }

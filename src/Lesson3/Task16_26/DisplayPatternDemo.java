@@ -9,10 +9,10 @@ class DisplayPatternDemo {
         pattern.patternThree(); // Task 18, also  Floyd Task 20
         pattern.patternPyramid(); // Task 19
         pattern.patternDiamond();// Task 21
-        // Task 22
+        pattern.patternPascalTriangle(); // Task 22
         pattern.patternStar(); // Task 23
         pattern.patternAt(); // Task 24
-        // Task 25
-        // Task 26
+        pattern.patternNumberRhombus(); // Task 25
+        pattern.patternCharRhombus();// Task 26
     }
 }

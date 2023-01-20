@@ -1,4 +1,4 @@
-package Lesson3.Task6;
+package Lesson3.Task6_and32;
 
 class ComparatorDemo {
     public static void main(String[] args) {

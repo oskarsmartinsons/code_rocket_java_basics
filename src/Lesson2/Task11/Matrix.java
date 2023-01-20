@@ -37,4 +37,32 @@ class Matrix {
         }
         return result;
     }
+
+    public Matrix multiply(Matrix second) {
+        Matrix first = this;
+        if (first.columns!= second.rows) {
+            System.out.println("Matrices cannot be multiplied");
+        }
+        Matrix result = new Matrix(first.rows,second.columns);
+        for (int i = 0; i < result.rows; i++) {
+            for (int j = 0; j < result.columns; j++) {
+                int value = 0;
+                for (int k = 0; k < result.columns; k++) {
+                    value += first.getElement(i,k) * second.getElement(k,j);
+                }
+                result.setElement(i,j,value);
+            }
+        }
+        return result;
+    }
+
+    public void printMatrix() {
+        System.out.println("========  Result =============");
+        for (int i = 0; i < columns; i++) {
+            for (int j = 0; j < rows; j++) {
+                System.out.print(this.getElement(i, j)+" ");
+            }
+            System.out.println();
+        }
+    }
 }

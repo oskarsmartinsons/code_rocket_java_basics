@@ -1,4 +1,4 @@
-package Lesson3.Task6;
+package Lesson3.Task6_and32;
 import java.text.DecimalFormat;
 
 class Comparator {
