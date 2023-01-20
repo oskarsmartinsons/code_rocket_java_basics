@@ -1,7 +1,5 @@
 package Lesson2.Task39;
 
-import static java.lang.Math.sqrt;
-
 class PentagonHelper {
     private final int sideCount;
     private final double sideLength;
