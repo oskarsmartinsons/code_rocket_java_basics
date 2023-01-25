@@ -2,7 +2,7 @@ package Lesson5.LinkedList;
 
 import java.util.*;
 
-class LinkedList_Task_1_22 {
+class LinkedList_Task_1_26 {
     public static void main(String[] args) {
         LinkedList<String> colors = new LinkedList<String>();
         colors.add("Red");
@@ -189,7 +189,8 @@ class LinkedList_Task_1_22 {
         System.out.println("Linked List 1: " + linkedList1);
         System.out.println("Linked List 2: " + linkedList2);
 
-        System.out.println("Are the lists the same? : " + linkedList1.equals(linkedList2));
+        System.out.println("Are the lists the same? (using equals()) : " + linkedList1.equals(linkedList2));
+        System.out.println("Does list1 contains list2 ? (using containsAll()) : " + linkedList1.containsAll(linkedList2));
 
         // Task 25 - check if linked list is empty
         System.out.println("\nTask 25 - check if linked list is empty");
@@ -201,6 +202,6 @@ class LinkedList_Task_1_22 {
         System.out.println("Original: " + colors);
         System.out.println("Replace element Nr.2 with 'Brown' :");
         colors.set(2,"Brown");
-        System.out.println(colors);
+        System.out.println("After: " + colors);
     }
 }

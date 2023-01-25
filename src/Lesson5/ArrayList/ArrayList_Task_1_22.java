@@ -128,7 +128,7 @@ class ArrayList_Task_1_22 {
 
         // Task 18 - test if array list is empty?
         System.out.println("\nTask 18 - is array list empty?");
-        System.out.println(colorsOther.isEmpty());
+        System.out.println(colors.isEmpty());
         System.out.println("Original: " + colors);
 
         // Task 19 - trim capacity of current size
@@ -146,7 +146,7 @@ class ArrayList_Task_1_22 {
         // Task 21 - replace the second element with specified element
         System.out.println("\nTask 21 - replace second element with specified element");
         System.out.println("Original: " + colors);
-        colors.set(2,"Orange");
+        colors.set(1,"Orange");
         System.out.println("After: " + colors);
 
         // Task 22 - print elements using position
