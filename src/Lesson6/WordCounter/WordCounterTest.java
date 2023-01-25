@@ -134,7 +134,7 @@ public class WordCounterTest {
         Map<String,Integer> result = wordCounter.wordsCount(words);
 
         if(result.get("test")==10) {
-            System.out.println("shouldReturn10KeysIfStringIs10UniqueWords: SUCCESS, expected 10 key/value pairs and is " + result + "'.");
-        } else System.err.println("shouldReturn10KeysIfStringIs10UniqueWords: FAILED, expected 10 key/value pairs but is" + result + "'.");
+            System.out.println("shouldReturn1KeyWithValue10IfStringIs10IdenticalWords: SUCCESS, expected 1 key with value 10 and is " + result + "'.");
+        } else System.err.println("shouldReturn1KeyWithValue10IfStringIs10IdenticalWords: FAILED, expected 1 key with value 10  but is" + result + "'.");
     }
 }
