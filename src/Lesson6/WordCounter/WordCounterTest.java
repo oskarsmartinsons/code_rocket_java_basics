@@ -4,18 +4,33 @@ import java.util.*;
 
 public class WordCounterTest {
     public static void main(String[] args) {
-        shouldReturnEmptyIfStringIsEmpty(""); // failed
+        shouldReturnExceptionIfStringIsNUll(null); // passed
+        shouldReturnEmptyIfStringIsEmpty(""); // passed
         shouldReturnEmptyIfStringIsSpace(" ");  // passed
         shouldReturnEmptyIfStringIsNonAlphabetic("1.3/4&536-7+"); // passed
         shouldReturn1KeyWithValue1IfStringIsOneWord("one");       // passed
         shouldReturn1KeyWithValue2IfStringIsOneWordTwice("one one");  // passed
         shouldReturn3KeysWithValue1IfStringIsThreeUniqueWords("one two three"); // passed
-        shouldReturn1KeyWithValue1IfStringIsOneWordWithLeadingNonAlphabetChar("1.one");  // failed
+        shouldReturn1KeyWithValue1IfStringIsOneWordWithLeadingNonAlphabetChar("1.one");  // passed
         shouldReturn1KeyWithValue1IfStringIsOneWordWithTrailingNonAlphabetChar("one!");  // passed
         shouldReturn1KeyWithValue2IfStringIsOneWordTwiceDelimitedWithNonAlphabetChars("one123one");  // passed
         shouldReturn10KeysIfStringIs10UniqueWords("one two three four five six seven eight nine ten"); // passed
         shouldReturn1KeyWithValue10IfStringIs10IdenticalWords("test..test1 test,test  3test-test .test.test >test test1"); // passed
     }
+
+    public static void shouldReturnExceptionIfStringIsNUll(String string) {
+        boolean isThrown = false;
+        try {
+            WordCounter wordCounter = new WordCounter();
+            List<String> words = wordCounter.splitIntoWords(string);
+        } catch (IllegalArgumentException expectedException) {
+            isThrown = true;
+        } finally {
+            if(isThrown==true) {
+                System.out.println("shouldReturnExceptionIfStringIsNUll: SUCCESS, expected exception and is " + isThrown + "'.");
+            } else System.err.println("shouldReturnExceptionIfStringIsNUll: FAILED, expected exception but is" + isThrown + "'.");
+        }
+    };
 
     public static void shouldReturnEmptyIfStringIsEmpty (String string) {
         WordCounter wordCounter = new WordCounter();
