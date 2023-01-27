@@ -43,7 +43,7 @@ class HashSetFunctions {
                 System.out.println("Original: " + hashSet);
                 // check if empty
                 boolean isEmpty = hashSet.isEmpty();
-                System.out.println("Is cloned hash set empty? " + isEmpty);
+                System.out.println("Is hash set empty? " + isEmpty);
         }
 
         // Task 6 - clone hash set
