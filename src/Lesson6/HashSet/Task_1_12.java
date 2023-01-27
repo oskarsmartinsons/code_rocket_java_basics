@@ -12,7 +12,7 @@ public class Task_1_12 {
         // Task 1 - Write a Java program to append the specified element to the end of a hash set.
         System.out.println("Task 1 - add element at the end of the has set");
         System.out.println("Before: " + hashSet);
-        hashSet.add("White");
+        hashSet.add("Gold");
         System.out.println("After: " + hashSet);
 
         // Task 2 - Write a Java program to iterate through all elements in a hash list.
