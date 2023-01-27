@@ -68,13 +68,37 @@ public class Task_1_12 {
         System.out.println("Original hash set: " + hashSet);
         // covert to Array List
         List<String> arrayList = new ArrayList<>(hashSet);
-        System.out.print("Hash set into array list: " + arrayList);
+        System.out.print("Hash set into array list: " + arrayList +"\n");
 
 
         // 10. Write a Java program to compare two hash set.
+        System.out.println("\nTask 10 - Write a Java program to compare two hash set.");
+        System.out.println("Original: " + hashSet);
+        // create other hash set to compare with original
+        HashSet<String> otherHashSet = new HashSet<>();
+        otherHashSet.add("White");
+        otherHashSet.add("Black");
+        otherHashSet.add("Red");
+
+        System.out.println("Other hash set: " + otherHashSet);
+
+        // compare if both hash sets are equal
+        boolean isEqual = hashSet.equals(otherHashSet);
+        System.out.println("Are hashsets equal ? " + isEqual);
+        System.out.println("Which elements are equal in Original and Other hash set: " );
+        // compare first hash set with other by elements
+        hashSet.forEach(elem-> System.out.println(otherHashSet.contains(elem)?elem+": Yes":elem+": No"));
 
         // 11. Write a Java program to compare two sets and retain elements which are same on both sets.
+        System.out.print("Task 11 - Retain elements which are the same in both hash sets: ");
+        // retain all elements that are equal
+        hashSet.retainAll(otherHashSet);
+        System.out.println(hashSet);
 
         // 12.Write a Java program to remove all of the elements from a hash set.
+        System.out.println("\nTask 12 - Write a Java program to remove all of the elements from a hash set.");
+        System.out.println("Original: " + hashSet);
+        hashSet.clear();
+        System.out.println("Cleared hash set: " + hashSet);
     }
 }
