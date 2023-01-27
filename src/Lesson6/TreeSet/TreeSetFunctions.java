@@ -36,7 +36,6 @@ class TreeSetFunctions {
         System.out.println("\nTask 4 - Write a Java program to create a reverse order view of the elements contained in a given tree set.");
         System.out.print("Original order: ");
         treeSet.forEach(t -> System.out.print(t + " "));
-      //  Iterator<Character> iterator = treeSet1.descendingIterator();
         System.out.print("\nReverse order: ");
         treeSet.descendingSet().forEach(t -> System.out.print(t + " "));
     }
