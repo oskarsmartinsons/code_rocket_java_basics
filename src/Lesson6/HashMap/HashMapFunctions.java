@@ -1,7 +1,6 @@
 package Lesson6.HashMap;
 
-import java.util.HashMap;
-import java.util.HashSet;
+import java.util.*;
 
 class HashMapFunctions {
 
@@ -65,8 +64,51 @@ class HashMapFunctions {
         System.out.println("\nTask 7 - test if a map contains a mapping for the specified key");
         System.out.println("Original: " + hashMap);
         // check if has key
-        hashMap.get(key);
+        boolean hasKey = hashMap.containsKey(key);
         System.out.println("Key is: " + key);
-        System.out.println("Value for the key: " + hashMap.get(key));
+        System.out.println("Does hash map contains key '" + key + "' ?:" + hasKey);
+    }
+
+    // Task 8 - Write a Java program to test if a map contains a mapping for the specified value
+    void checkValue(HashMap hashMap, Object value) {
+        System.out.println("\nTask 8 - test if a map contains a mapping for the specified value");
+        System.out.println("Original: " + hashMap);
+        // check if has value
+        boolean containsValue = hashMap.containsValue(value);
+        System.out.println("Does hash map contains value '" + value + "' ? : " + containsValue );
+    }
+
+    // Task 9 - Write a Java program to create a set view of the mappings contained in a map
+    void createSetViewOfMappings(HashMap hashMap) {
+        System.out.println("\nTask 9 - create a set view of the mappings contained in a map");
+        System.out.println("Original: " + hashMap);
+        // returns set view of mappings
+        Set setView = hashMap.entrySet();
+        System.out.println("Set view of the mappings:" + setView );
+    }
+
+    // Task 10 - Write a Java program to get the value of a specified key in a map
+    void getKeyValue(HashMap hashMap, Object key) {
+        System.out.println("\nTask 10 - get the value of a specified key in a map");
+        System.out.println("Original: " + hashMap);
+        System.out.println("Key is: " + key);
+        System.out.println("What is the value for '" + key + "' ?:" + hashMap.get(key));
+    }
+
+    // Task 11 - Write a Java program to get a set view of the keys contained in this map
+    void createSetViewOfKeys(HashMap hashMap) {
+        System.out.println("\nTask 11 - get a set view of the keys contained in this map");
+        System.out.println("Original: " + hashMap);
+        // returns set view of keys
+        Set setViewOfKeys = hashMap.keySet();
+        System.out.println("Set view of the keys:" + setViewOfKeys );
+    }
+
+    // Task 12 - Write a Java program to get a collection view of the values contained in this map
+    void getCollectionViewOfValues(HashMap hashMap) {
+        System.out.println("\nTask 12 - get a collection view of the values contained in this map");
+        System.out.println("Original: " + hashMap);
+        // Returns a Collection view of the values contained in this map.
+        System.out.println("Collection of values in the map:" + hashMap.values());
     }
 }

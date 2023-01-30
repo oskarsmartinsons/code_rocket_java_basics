@@ -40,6 +40,19 @@ class HashMapDemo {
         // Task 7 - Write a Java program to test if a map contains a mapping for the specified key
         hashMapFunctions.checkKey(hashMap, 2);
 
+        // Task 8 - Write a Java program to test if a map contains a mapping for the specified value
+        hashMapFunctions.checkValue(hashMap,'D' );
 
+        // Task 9 - Write a Java program to create a set view of the mappings contained in a map
+        hashMapFunctions.createSetViewOfMappings(hashMap);
+
+        // Task 10 - Write a Java program to get the value of a specified key in a map
+        hashMapFunctions.getKeyValue(hashMap, 3);
+
+        // Task 11 - Write a Java program to get a set view of the keys contained in this map
+        hashMapFunctions.createSetViewOfKeys(hashMap);
+
+        // Task 12 - Write a Java program to get a collection view of the values contained in this map
+        hashMapFunctions.getCollectionViewOfValues(hashMap);
     }
 }
