@@ -66,7 +66,7 @@ class ArrayList_Task_1_22 {
         // Task 11 - reverse array list elements
         System.out.println("\nTask 11 - reverse array elements:");
         System.out.println("Before: " + colors);
-        colors.sort(Comparator.reverseOrder());
+        Collections.reverse(colors);
         System.out.println("After: " + colors );
 
         // Task 12 - extract array list elements
