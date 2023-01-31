@@ -7,7 +7,6 @@ public class ConversionRuleFromFahrenheitToCelsius implements TemperatureConvert
     public void covert(Temperature temperature) {
         if((temperature.getUnitFrom()=='F') && (temperature.getUnitTo()=='C')) {
             double result = (temperature.getTemperature()-CONST2) * CONST1;
-           // System.out.println("Conversion Result from F->C: " + temperature.getTemperature() + "F is " + result + "C");
             System.out.printf("Conversion Result from F->C: %.2f F is %.2f C", temperature.getTemperature(), result );
 
         }

@@ -6,7 +6,6 @@ public class ConversionRuleFromKelvinToCelsius implements TemperatureConverter{
     public void covert(Temperature temperature) {
         if((temperature.getUnitFrom()=='K') && (temperature.getUnitTo()=='C')) {
             double result = temperature.getTemperature() - K;
-         //   System.out.println("Conversion Result from K->C: " + temperature.getTemperature() + "K is " + result + "C");
             System.out.printf("Conversion Result from K->C: %.2f K is %.2f C", temperature.getTemperature(), result );
 
         }

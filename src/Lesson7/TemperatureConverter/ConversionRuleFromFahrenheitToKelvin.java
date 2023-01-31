@@ -8,7 +8,6 @@ public class ConversionRuleFromFahrenheitToKelvin implements TemperatureConverte
     public void covert(Temperature temperature) {
         if((temperature.getUnitFrom()=='F') && (temperature.getUnitTo()=='K')) {
             double result = (temperature.getTemperature()-CONST2)*CONST1 + K;
-          //  System.out.println("Conversion Result from F->K: " + temperature.getTemperature() + "F is " + result + "K");
             System.out.printf("Conversion Result from F->F: %.2f F is %.2f K", temperature.getTemperature(), result );
 
         }
