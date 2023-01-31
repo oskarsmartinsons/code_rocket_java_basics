@@ -1,13 +1,16 @@
 package Lesson7.TemperatureConverter;
 
 public class ConversionRuleFromCelsiusToFahrenheit implements TemperatureConverter{
-    private double CONST1 = 1.8;
+    private final double CONST1 = 1.8;
     private final int CONST2 = 32;
     @Override
-    public void covert(Temperature temperature) {
-        if((temperature.getUnitFrom()=='C') && (temperature.getUnitTo()=='F')) {
-            double result = (temperature.getTemperature()*CONST1 + CONST2);
-            System.out.printf("Conversion Result from C->F: %.2f C is %.2f F", temperature.getTemperature(), result );
-        }
+    public double convert(Temperature temperature) {
+      return temperature.getTemperature()*CONST1 + CONST2;
+    }
+
+    @Override
+    public boolean isProperConverter(Temperature temperature) {
+        if((temperature.getUnitFrom()=='C') && (temperature.getUnitTo()=='F')) {return true;}
+        return false;
     }
 }

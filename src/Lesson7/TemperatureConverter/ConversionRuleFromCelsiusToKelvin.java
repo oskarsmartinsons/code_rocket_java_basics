@@ -1,13 +1,15 @@
 package Lesson7.TemperatureConverter;
 
 public class ConversionRuleFromCelsiusToKelvin implements TemperatureConverter{
-    private final int K = 273;
+    private final double K = 273.15;
     @Override
-    public void covert(Temperature temperature) {
-        if((temperature.getUnitFrom()=='C') && (temperature.getUnitTo()=='K')) {
-            double result = temperature.getTemperature() + K;
-            System.out.printf("Conversion Result from C->K: %.2f C is %.2f K", temperature.getTemperature(), result );
+    public double convert(Temperature temperature) {
+        return temperature.getTemperature() + K;
+    }
 
-        }
+    @Override
+    public boolean isProperConverter(Temperature temperature) {
+        if((temperature.getUnitFrom()=='C') && (temperature.getUnitTo()=='K')) {return true;}
+        return false;
     }
 }

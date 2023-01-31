@@ -12,8 +12,19 @@ public class TemperatureServiceDemo {
         UserInput userInput = new UserInput();
         Temperature temperature = userInput.input();
 
-        // iterate through converters and execute void to the one that matches with user input
+        // iterate through converters and execute print out result to the one that matches with user input
         TemperatureConversionService temperatureConversionService = new TemperatureConversionService(converters);
         temperatureConversionService.convert(temperature);
+
+        double result = temperatureConversionService.convert(temperature);
+
+        System.out.printf("\nConversion Result from %s->%s: %.2f %s is %.2f %s",
+                temperature.getUnitFrom(),
+                temperature.getUnitTo(),
+                temperature.getTemperature(),
+                temperature.getUnitFrom(),
+                result,
+                temperature.getUnitTo()
+                );
     }
 }

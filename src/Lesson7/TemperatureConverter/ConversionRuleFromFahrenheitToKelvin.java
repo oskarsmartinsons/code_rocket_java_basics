@@ -5,11 +5,13 @@ public class ConversionRuleFromFahrenheitToKelvin implements TemperatureConverte
     private final int CONST2 = 32;
     private final double K = 273.15;
     @Override
-    public void covert(Temperature temperature) {
-        if((temperature.getUnitFrom()=='F') && (temperature.getUnitTo()=='K')) {
-            double result = (temperature.getTemperature()-CONST2)*CONST1 + K;
-            System.out.printf("Conversion Result from F->F: %.2f F is %.2f K", temperature.getTemperature(), result );
-
-        }
+    public double convert(Temperature temperature) {
+        double result = (temperature.getTemperature()-CONST2)*CONST1 + K;
+        return result;
+    }
+    @Override
+    public boolean isProperConverter(Temperature temperature) {
+        if((temperature.getUnitFrom()=='F') && (temperature.getUnitTo()=='K')) {return true;}
+        return false;
     }
 }

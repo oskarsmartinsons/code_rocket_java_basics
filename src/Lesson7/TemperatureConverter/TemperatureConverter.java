@@ -1,5 +1,7 @@
 package Lesson7.TemperatureConverter;
 
 public interface TemperatureConverter {
-    void covert (Temperature temperature);
+    double convert(Temperature temperature);
+
+    boolean isProperConverter(Temperature temperature);
 }
