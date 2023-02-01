@@ -10,8 +10,8 @@ public class TemperatureConversionService {
     }
 
     // logic - iterate through the list of converters and execute if matches with user input from/to unit
-    public double convert (Temperature temperature) {
-        double result=1000; //if incorrect inputs will return 1000 and wont be
+    public double convertTemperature (Temperature temperature) {
+        double result=1000; //if incorrect inputs will return 1000
 
         for (TemperatureConverter converter : listOfConverters) {
             if (converter.isProperConverter(temperature)) {

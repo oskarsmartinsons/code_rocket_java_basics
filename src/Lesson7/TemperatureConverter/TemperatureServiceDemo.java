@@ -14,9 +14,9 @@ public class TemperatureServiceDemo {
 
         // iterate through converters and execute print out result to the one that matches with user input
         TemperatureConversionService temperatureConversionService = new TemperatureConversionService(converters);
-        temperatureConversionService.convert(temperature);
+        temperatureConversionService.convertTemperature(temperature);
 
-        double result = temperatureConversionService.convert(temperature);
+        double result = temperatureConversionService.convertTemperature(temperature);
 
         System.out.printf("\nConversion Result from %s->%s: %.2f %s is %.2f %s",
                 temperature.getUnitFrom(),
