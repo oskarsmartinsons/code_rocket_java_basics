@@ -4,7 +4,7 @@ public class ConversionRuleFromKelvinToCelsius implements TemperatureConverter{
     private final double K = 273.15;
     @Override
     public double convert(Temperature temperature) {
-        return temperature.getTemperature() - K;
+        return (double) Math.round((temperature.getTemperature() - K)*100)/100;
     }
 
     @Override

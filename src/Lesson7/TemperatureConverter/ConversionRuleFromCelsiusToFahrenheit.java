@@ -5,7 +5,7 @@ public class ConversionRuleFromCelsiusToFahrenheit implements TemperatureConvert
     private final int CONST2 = 32;
     @Override
     public double convert(Temperature temperature) {
-      return temperature.getTemperature()*CONST1 + CONST2;
+      return (double) Math.round((temperature.getTemperature()*CONST1 + CONST2)*100)/100;
     }
 
     @Override

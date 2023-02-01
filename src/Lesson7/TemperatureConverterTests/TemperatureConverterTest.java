@@ -1,9 +1,5 @@
 package Lesson7.TemperatureConverterTests;
 
-import Lesson7.TemperatureConverter.ConversionRuleFromFahrenheitToKelvin;
-import Lesson7.TemperatureConverter.ConversionRuleFromKelvinToCelsius;
-import Lesson7.TemperatureConverter.ConversionRuleFromKelvinToFahrenheit;
-
 public class TemperatureConverterTest {
     public static void main(String[] args) {
         // tests for conversion C->F
@@ -36,7 +32,5 @@ public class TemperatureConverterTest {
         ConversionRuleFromFahrenheitToKelvinTest.testFahrenheitToKelvinConversion(-459.67,0);
         ConversionRuleFromFahrenheitToKelvinTest.testFahrenheitToCelsiusIsProperConverterTrue('F','K');
         ConversionRuleFromFahrenheitToKelvinTest.testFahrenheitToCelsiusIsProperConverterFalse('C','K');
-
     }
-
 }

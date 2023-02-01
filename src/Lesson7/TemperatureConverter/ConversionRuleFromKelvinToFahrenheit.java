@@ -6,7 +6,7 @@ public class ConversionRuleFromKelvinToFahrenheit implements TemperatureConverte
     private final double K = 273.15;
     @Override
     public double convert(Temperature temperature) {
-        return CONST1*(temperature.getTemperature()-K) + CONST2;
+        return (double) Math.round(100*(CONST1*(temperature.getTemperature()-K) + CONST2))/100;
     }
 
     @Override
