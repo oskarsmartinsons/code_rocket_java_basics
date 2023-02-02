@@ -1,7 +1,7 @@
 package Lesson7.TemperatureConverter;
 
 public interface TemperatureConverter {
-    double convert(Temperature temperature);
+    double convert(TemperatureRequest temperatureRequest);
 
-    boolean isProperConverter(Temperature temperature);
+    boolean isProperConverter(TemperatureRequest temperatureRequest);
 }

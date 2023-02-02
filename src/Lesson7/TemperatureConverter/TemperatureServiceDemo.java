@@ -4,27 +4,23 @@ import java.util.ArrayList;
 
 public class TemperatureServiceDemo {
     public static void main(String[] args) {
-        // get array list of all conversion rules (converters)
+        // get array list of all conversion rules (converters) implementations
         AllConversionRules allConversionRules = new AllConversionRules();
         ArrayList<TemperatureConverter> converters = allConversionRules.getConverters();
 
-        // get user inputs and pass to Temperature object
-        UserInput userInput = new UserInput();
-        Temperature temperature = userInput.input();
-
-        // iterate through converters and execute print out result to the one that matches with user input
+        // pass converters to service class
         TemperatureConversionService temperatureConversionService = new TemperatureConversionService(converters);
-        temperatureConversionService.convertTemperature(temperature);
 
-        double result = temperatureConversionService.convertTemperature(temperature);
+        // instance of UserInput needed as parameter for ActionConvert and UserMenu
+        UserInput userInput = new UserInput();
 
-        System.out.printf("\nConversion Result from %s->%s: %.2f %s is %.2f %s",
-                temperature.getUnitFrom(),
-                temperature.getUnitTo(),
-                temperature.getTemperature(),
-                temperature.getUnitFrom(),
-                result,
-                temperature.getUnitTo()
-                );
+        // get array list of all action implementations, and pass arguments where needed
+        ArrayList<ActionMenu> actionsList = new ArrayList<>();
+        actionsList.add(new ActionConvert(userInput, temperatureConversionService));
+        actionsList.add(new ActionExit());
+
+        // start the program
+        UserMenu userMenu = new UserMenu(userInput, actionsList);
+        userMenu.startMenu();
     }
 }

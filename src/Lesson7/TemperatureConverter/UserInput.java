@@ -1,10 +1,9 @@
 package Lesson7.TemperatureConverter;
 
-import java.util.HashMap;
 import java.util.Scanner;
 
 public class UserInput {
-    Temperature input () {
+    TemperatureRequest inputRequest() {
         Scanner input = new Scanner(System.in);
 
         System.out.println("Enter unit FROM you want to convert:  C,K or F: ");
@@ -16,6 +15,12 @@ public class UserInput {
         System.out.println("Enter unit TO you want to convert:  C,K or F: ");
         String inputUnitTo = input.next();
 
-        return new Temperature(inputTemp,inputUnitFrom.charAt(0), inputUnitTo.charAt(0));
+        return new TemperatureRequest(inputTemp,inputUnitFrom.charAt(0), inputUnitTo.charAt(0));
+    }
+
+    int inputActionNumber() {
+        System.out.println("Please enter action number: ");
+        Scanner input = new Scanner(System.in);
+        return input.nextInt();
     }
 }

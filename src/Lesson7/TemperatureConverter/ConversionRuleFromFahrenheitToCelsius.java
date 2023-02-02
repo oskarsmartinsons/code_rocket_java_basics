@@ -4,12 +4,11 @@ public class ConversionRuleFromFahrenheitToCelsius implements TemperatureConvert
     private final double CONST1 = (double) 5/9;
     private final int CONST2 = 32;
     @Override
-    public double convert(Temperature temperature) {
-        return (double) Math.round(((temperature.getTemperature()-CONST2) * CONST1)*100)/100;
+    public double convert(TemperatureRequest temperatureRequest) {
+        return (double) Math.round(((temperatureRequest.getTemperature()-CONST2) * CONST1)*100)/100;
     }
     @Override
-    public boolean isProperConverter(Temperature temperature) {
-        if((temperature.getUnitFrom()=='F') && (temperature.getUnitTo()=='C')) {return true;}
-        return false;
+    public boolean isProperConverter(TemperatureRequest temperatureRequest) {
+        return (temperatureRequest.getUnitFrom() == 'F') && (temperatureRequest.getUnitTo() == 'C');
     }
 }

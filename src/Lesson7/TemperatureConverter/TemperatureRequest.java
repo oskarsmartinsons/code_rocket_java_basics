@@ -2,12 +2,12 @@ package Lesson7.TemperatureConverter;
 
 import java.util.Objects;
 
-public class Temperature {
+public class TemperatureRequest {
     private final double temperature;
     private final char unitFrom;
     private final char unitTo;
 
-    public Temperature(double temperature, char unitFrom, char unitTo) {
+    public TemperatureRequest(double temperature, char unitFrom, char unitTo) {
         this.temperature = temperature;
         this.unitFrom = unitFrom;
         this.unitTo = unitTo;
@@ -29,7 +29,7 @@ public class Temperature {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Temperature that = (Temperature) o;
+        TemperatureRequest that = (TemperatureRequest) o;
         return Double.compare(that.temperature, temperature) == 0 && unitFrom == that.unitFrom && unitTo == that.unitTo;
     }
 
