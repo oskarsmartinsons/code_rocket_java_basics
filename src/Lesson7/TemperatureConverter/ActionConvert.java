@@ -19,7 +19,7 @@ public class ActionConvert implements ActionMenu{
         // get result
         double result = temperatureConversionService.convertTemperature(temperatureRequest);
         // print out result
-        System.out.printf("Conversion Result from %s->%s: %.2f %s is %.2f %s%n",
+        System.out.printf("Conversion Result from %s->%s: %.2f %s is %.2f %s%n%n",
                 temperatureRequest.getUnitFrom(),
                 temperatureRequest.getUnitTo(),
                 temperatureRequest.getTemperature(),

@@ -1,6 +1,6 @@
 package Lesson7.TemperatureConverter;
 
-public class ConversionRuleFromFahrenheitToKelvin implements TemperatureConverter{
+public class ConversionRuleFromFahrenheitToKelvin implements TemperatureConverter, TemperatureFormula{
     private double  CONST1 = (double) 5/9;
     private final int CONST2 = 32;
     private final double K = 273.15;
@@ -11,5 +11,15 @@ public class ConversionRuleFromFahrenheitToKelvin implements TemperatureConverte
     @Override
     public boolean isProperConverter(TemperatureRequest temperatureRequest) {
         return (temperatureRequest.getUnitFrom() == 'F') && (temperatureRequest.getUnitTo() == 'K');
+    }
+
+    @Override
+    public boolean isProperFormula(FormulaDetails formulaDetails) {
+        return (formulaDetails.getUnitFrom() == 'F') && (formulaDetails.getUnitTo() == 'K');
+    }
+
+    @Override
+    public String display(FormulaDetails formulaDetails) {
+        return "Formula to F->K: tK = (tF - 32) * 5/9 + 273.15";
     }
 }

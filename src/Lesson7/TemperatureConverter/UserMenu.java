@@ -11,12 +11,14 @@ public class UserMenu {
         this.actionsList = actionsList;
     }
     public void startMenu() {
-        printOutActions();
-        int actionNr = userInput.inputActionNumber();
-        if(actionNr>=0 && actionNr < actionsList.size()) {
-            actionsList.get(actionNr).executeAction();
-        } else {
-            System.out.println("Sorry, please enter correct action number!");
+        while (true) {
+            printOutActions();
+            int actionNr = userInput.inputActionNumber();
+            if (actionNr >= 0 && actionNr < actionsList.size()) {
+                actionsList.get(actionNr).executeAction();
+            } else {
+                System.out.println("Sorry, please enter correct action number!");
+            }
         }
     }
     public void printOutActions() {
