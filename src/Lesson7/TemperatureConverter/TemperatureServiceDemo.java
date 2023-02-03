@@ -9,20 +9,21 @@ public class TemperatureServiceDemo {
         ArrayList<TemperatureConverter> converters = allImplementationLists.getConverters();
         ArrayList<TemperatureFormula> formulas = allImplementationLists.getFormulas();
 
-        // pass converters to service class
+        // pass converters to service class, that is needed as argument for ActionConvert
         TemperatureConversionService temperatureConversionService = new TemperatureConversionService(converters);
 
-        // pass formulas to service class
+        // pass formulas to service class, that is needed as argument for ActionShowFormula
         TemperatureFormulaService temperatureFormulaService = new TemperatureFormulaService(formulas);
 
-        // instance of UserInput needed as parameter for ActionConvert and UserMenu
+        // pass instance of TemperatureServiceClass to verification service, which is needed as argument for ActionVerify
+        TemperatureVerificationService temperatureVerificationService = new TemperatureVerificationService(temperatureConversionService);
+
+        // instance of UserInput needed as parameter for ActionMenu and UserMenu
         UserInput userInput = new UserInput();
 
-        // get array list of all action implementations, and pass arguments where needed
-        ArrayList<ActionMenu> actionsList = new ArrayList<>();
-        actionsList.add(new ActionConvert(userInput, temperatureConversionService));
-        actionsList.add(new ActionShowFormula(userInput, temperatureFormulaService));
-        actionsList.add(new ActionExit());
+        // get array list of all action implementations, and pass arguments
+        ArrayList<ActionMenu> actionsList = allImplementationLists.getActions
+                (userInput,temperatureConversionService, temperatureFormulaService, temperatureVerificationService);
 
         // start the program
         UserMenu userMenu = new UserMenu(userInput, actionsList);

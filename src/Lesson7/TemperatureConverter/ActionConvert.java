@@ -15,6 +15,7 @@ public class ActionConvert implements ActionMenu{
 
     @Override
     public void executeAction() {
+        System.out.println("\nConvert Temperature:");
         TemperatureRequest temperatureRequest = userInput.inputRequest();
         // get result
         double result = temperatureConversionService.convertTemperature(temperatureRequest);

@@ -26,4 +26,17 @@ public class AllImplementationLists {
         formulas.add(new ConversionRuleFromCelsiusToFahrenheit());
         return formulas;
     }
+
+    // put all action implementations of ActionMenu in array list
+    ArrayList<ActionMenu> getActions(UserInput userInput,
+                                     TemperatureConversionService temperatureConversionService,
+                                     TemperatureFormulaService temperatureFormulaService,
+                                     TemperatureVerificationService temperatureVerificationService) {
+        ArrayList<ActionMenu> actions = new ArrayList<>();
+        actions.add(new ActionConvert(userInput, temperatureConversionService));
+        actions.add(new ActionShowFormula(userInput, temperatureFormulaService));
+        actions.add(new ActionVerify(userInput, temperatureVerificationService));
+        actions.add(new ActionExit());
+        return actions;
+    }
 }

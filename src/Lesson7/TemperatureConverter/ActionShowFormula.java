@@ -17,7 +17,8 @@ public class ActionShowFormula implements ActionMenu{
 
     @Override
     public void executeAction() {
-      FormulaDetails formulaDetails =  userInput.inputFormulaDetails();
+        System.out.println("\nShow conversion formula:");
+        FormulaDetails formulaDetails =  userInput.inputFormulaDetails();
       temperatureFormulaService.displayFormula(formulaDetails);
     }
 }
