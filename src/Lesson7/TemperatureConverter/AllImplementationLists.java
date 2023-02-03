@@ -31,11 +31,13 @@ public class AllImplementationLists {
     ArrayList<ActionMenu> getActions(UserInput userInput,
                                      TemperatureConversionService temperatureConversionService,
                                      TemperatureFormulaService temperatureFormulaService,
-                                     TemperatureVerificationService temperatureVerificationService) {
+                                     TemperatureVerificationService temperatureVerificationService,
+                                     TemperatureHistoryService temperatureHistoryService) {
         ArrayList<ActionMenu> actions = new ArrayList<>();
         actions.add(new ActionConvert(userInput, temperatureConversionService));
         actions.add(new ActionShowFormula(userInput, temperatureFormulaService));
         actions.add(new ActionVerify(userInput, temperatureVerificationService));
+        actions.add(new ActionShowHistory(temperatureHistoryService));
         actions.add(new ActionExit());
         return actions;
     }

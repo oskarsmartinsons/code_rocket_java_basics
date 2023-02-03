@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class UserMenu {
-    private UserInput userInput;
-    private ArrayList<ActionMenu> actionsList;
+    private final UserInput userInput;
+    private final ArrayList<ActionMenu> actionsList;
     public UserMenu(UserInput userInput, ArrayList<ActionMenu> actionsList) {
         this.userInput = userInput;
         this.actionsList = actionsList;

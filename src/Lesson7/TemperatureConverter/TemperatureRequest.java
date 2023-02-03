@@ -6,7 +6,6 @@ public class TemperatureRequest {
     private final double temperature;
     private final char unitFrom;
     private final char unitTo;
-
     public TemperatureRequest(double temperature, char unitFrom, char unitTo) {
         this.temperature = temperature;
         this.unitFrom = unitFrom;

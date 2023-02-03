@@ -1,7 +1,7 @@
 package Lesson7.TemperatureConverter;
 
 public class TemperatureVerificationService {
-    private TemperatureConversionService temperatureConversionService;
+    private final TemperatureConversionService temperatureConversionService;
     public TemperatureVerificationService(TemperatureConversionService temperatureConversionService) {
         this.temperatureConversionService = temperatureConversionService;
     }
@@ -13,7 +13,7 @@ public class TemperatureVerificationService {
         if(verificationDetails.getTemperatureTo()==expectedResult) {
             System.out.println("Correct conversion result\n");
         } else {
-        System.out.println("Incorrect conversion result, should be " + expectedResult + verificationDetails.getTemperatureTo()+"\n");
+        System.out.println("Incorrect conversion result, should be " + expectedResult + verificationDetails.getUnitTo()+"\n");
     }
     }
 

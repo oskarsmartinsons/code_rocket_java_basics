@@ -2,8 +2,7 @@ package Lesson7.TemperatureConverter;
 
 public class ActionVerify implements ActionMenu{
     private final UserInput userInput;
-
-    private TemperatureVerificationService temperatureVerificationService;
+    private final TemperatureVerificationService temperatureVerificationService;
 
     public ActionVerify(UserInput userInput, TemperatureVerificationService temperatureVerificationService) {
         this.userInput = userInput;

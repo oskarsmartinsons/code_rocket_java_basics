@@ -3,10 +3,10 @@ package Lesson7.TemperatureConverter;
 import java.util.Objects;
 
 public class VerificationDetails {
-    private char unitFrom;
-    private double temperatureFrom;
-    private char unitTo;
-    private double temperatureTo;
+    private final char unitFrom;
+    private final double temperatureFrom;
+    private final char unitTo;
+    private final double temperatureTo;
 
     public VerificationDetails(char unitFrom, double temperatureFrom, char unitTo, double temperatureTo) {
         this.unitFrom = unitFrom;

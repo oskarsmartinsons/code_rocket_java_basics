@@ -4,5 +4,4 @@ public interface TemperatureFormula {
     boolean isProperFormula(FormulaDetails formulaDetails);
 
     String display(FormulaDetails formulaDetails);
-
 }

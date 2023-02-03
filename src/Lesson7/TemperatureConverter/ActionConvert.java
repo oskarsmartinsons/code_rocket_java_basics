@@ -1,8 +1,12 @@
 package Lesson7.TemperatureConverter;
 
+import java.util.ArrayList;
+import java.util.Date;
+
 public class ActionConvert implements ActionMenu{
     private final UserInput userInput;
     private final TemperatureConversionService temperatureConversionService;
+    public static ArrayList<ConversionHistory> allHistory = new ArrayList<>();
 
     public ActionConvert(UserInput userInput, TemperatureConversionService temperatureConversionService) {
         this.userInput = userInput;
@@ -28,5 +32,15 @@ public class ActionConvert implements ActionMenu{
                 result,
                 temperatureRequest.getUnitTo()
         );
+
+        ConversionHistory conversionHistory = new ConversionHistory(
+                temperatureRequest.getUnitFrom(),
+                temperatureRequest.getTemperature(),
+                temperatureRequest.getUnitTo(),
+                result,
+                new Date()
+        );
+
+        allHistory.add(conversionHistory);
     }
 }
