@@ -8,9 +8,7 @@ public class TriangleOption implements ShapeMenu {
     }
 
     @Override
-    public boolean filterShape(int input) {
-        input= 1;
-        if(input ==1) return true;
-        return false;
+    public boolean filterShape(String input) {
+        return input.equals("triangle");
     }
 }
