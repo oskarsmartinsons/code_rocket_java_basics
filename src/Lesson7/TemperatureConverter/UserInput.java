@@ -6,16 +6,17 @@ public class UserInput {
     TemperatureRequest inputRequest() {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter unit FROM you want to convert:  C,K or F: ");
-        String inputUnitFrom = input.next();
+        String inputUnitFrom = input.next().toUpperCase();
         System.out.println("Enter temperature: ");
         double inputTemp = input.nextDouble();
         System.out.println("Enter unit TO you want to convert:  C,K or F: ");
-        String inputUnitTo = input.next();
+        String inputUnitTo = input.next().toUpperCase();
 
         return new TemperatureRequest(inputTemp,inputUnitFrom.charAt(0), inputUnitTo.charAt(0));
     }
 
     int inputActionNumber() {
+        System.out.println("-----------------------------");
         System.out.println("Please enter action number: ");
         Scanner input = new Scanner(System.in);
         return input.nextInt();
@@ -24,9 +25,9 @@ public class UserInput {
     FormulaDetails inputFormulaDetails() {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter unit FROM you want to convert:  C,K or F: ");
-        String inputUnitFrom = input.next();
+        String inputUnitFrom = input.next().toUpperCase();
         System.out.println("Enter unit TO you want to convert:  C,K or F: ");
-        String inputUnitTo = input.next();
+        String inputUnitTo = input.next().toUpperCase();
 
         return new FormulaDetails(inputUnitFrom.charAt(0), inputUnitTo.charAt(0));
     }
@@ -34,11 +35,11 @@ public class UserInput {
     VerificationDetails inputVerificationDetails() {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter unit FROM you want to verify:  C,K or F: ");
-        String inputUnitFrom = input.next();
+        String inputUnitFrom = input.next().toUpperCase();
         System.out.println("Enter temperature FROM (in " + inputUnitFrom +"):");
         double inputTempFrom = input.nextDouble();
         System.out.println("Enter unit you wish TO verify (" + inputUnitFrom + "->?) :  C,K or F: ");
-        String inputUnitTo = input.next();
+        String inputUnitTo = input.next().toUpperCase();
         System.out.println("Enter converted temperature TO verify (in " + inputUnitTo +"): ");
         double inputTempTo = input.nextDouble();
 

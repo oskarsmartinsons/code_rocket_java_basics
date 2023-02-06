@@ -6,7 +6,7 @@ public class TemperatureHistoryService {
              System.out.println("There are no conversion records in history.\n");
          } else {
              ActionConvert.allHistory.forEach(record -> System.out.println(
-                     record.getTempFrom() + record.getUnitFrom() + " -> " + record.getTempTo() + record.getUnitTo() +
+                    record.getTempFrom() + "" + record.getUnitFrom() + " -> " + record.getTempTo() + record.getUnitTo() +
                              ",  " + record.getTime()
              ));
              System.out.println();
