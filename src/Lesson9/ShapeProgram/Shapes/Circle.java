@@ -1,6 +1,7 @@
 package Lesson9.ShapeProgram.Shapes;
 
 import java.math.BigDecimal;
+import java.util.Objects;
 
 public class Circle extends Shape{
     private final BigDecimal PI = new BigDecimal("3.14");
@@ -23,5 +24,26 @@ public class Circle extends Shape{
     @Override
     public BigDecimal area() {
         return radius.pow(2).multiply(PI);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Circle circle = (Circle) o;
+        return Objects.equals(PI, circle.PI) && Objects.equals(radius, circle.radius);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(PI, radius);
+    }
+
+    @Override
+    public String toString() {
+        return "Circle{" +
+                "PI=" + PI +
+                ", radius=" + radius +
+                '}';
     }
 }

@@ -2,6 +2,7 @@ package Lesson9.ShapeProgram;
 
 import Lesson9.ShapeProgram.ActionImplementations.*;
 import Lesson9.ShapeProgram.Services.DisplayShapeService;
+import Lesson9.ShapeProgram.Services.StoreShapeService;
 import Lesson9.ShapeProgram.Services.SumAreaService;
 import Lesson9.ShapeProgram.Services.SumPerimeterService;
 import Lesson9.ShapeProgram.ShapeMenuImplementation.CircleType;
@@ -16,11 +17,12 @@ import java.util.List;
 public class Lists {
     public static ArrayList<Shape> listOfShapes = new ArrayList<>();
     List<ActionMenu> getActions (DisplayShapeService displayShapesService,
+                                 StoreShapeService storeShapeService,
                                  SumPerimeterService sumPerimeterService,
                                  SumAreaService sumAreaService) {
         return List.of(
                 new Exit(),
-                new Store(),
+                new Store(storeShapeService),
                 new SumPerimeter(sumPerimeterService),
                 new SumArea(sumAreaService),
                 new DisplayShapes(displayShapesService)

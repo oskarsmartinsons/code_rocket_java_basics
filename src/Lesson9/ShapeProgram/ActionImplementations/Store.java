@@ -6,6 +6,11 @@ import Lesson9.ShapeProgram.Shapes.ShapeType;
 import Lesson9.ShapeProgram.UserInput;
 
 public class Store implements ActionMenu {
+    private final StoreShapeService storeShapeService;
+
+    public Store(StoreShapeService storeShapeService) {
+        this.storeShapeService = storeShapeService;
+    }
 
     @Override
     public String getAction() {
@@ -15,11 +20,7 @@ public class Store implements ActionMenu {
     @Override
     public void executeAction(ShapeType type) {
         System.out.println("Store shape is running (choose shape):");
-
-        UserInput userInput = new UserInput();
-        Shape square = userInput.inputSquare();
-        StoreShapeService storeShapeService = new StoreShapeService();
-        storeShapeService.storeShape(square);
+        storeShapeService.storeShape(type);
         // display new menu
         System.out.println(type + " is saved!");
     }
