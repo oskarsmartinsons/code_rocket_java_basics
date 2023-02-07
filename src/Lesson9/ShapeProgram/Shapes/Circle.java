@@ -6,8 +6,8 @@ public class Circle extends Shape{
     private final BigDecimal PI = new BigDecimal("3.14");
     private BigDecimal radius;
 
-    public Circle(ShapeType type, BigDecimal radius) {
-        super(type);
+    public Circle(BigDecimal radius) {
+        this.setType(ShapeType.CIRCLE);
         this.radius = radius;
     }
 

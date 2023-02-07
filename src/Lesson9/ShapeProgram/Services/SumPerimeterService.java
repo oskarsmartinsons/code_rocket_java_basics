@@ -7,10 +7,14 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 
 public class SumPerimeterService {
-    public BigDecimal sumPerimeter(ArrayList<Shape> shapeList) {
+    private ArrayList<Shape> shapeList;
+    public SumPerimeterService(ArrayList<Shape> shapeList) {
+        this.shapeList = shapeList;
+    }
+    public BigDecimal sumPerimeter(ShapeType type) {
         BigDecimal allPerimeters = new BigDecimal("0.00");
         for (Shape s:shapeList) {
-            if (s.getType().equals(ShapeType.SQUARE)){
+            if (s.getType().equals(type)){
                 allPerimeters = allPerimeters.add(s.perimeter());
             }
         }

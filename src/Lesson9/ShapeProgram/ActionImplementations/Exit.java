@@ -1,5 +1,7 @@
 package Lesson9.ShapeProgram.ActionImplementations;
 
+import Lesson9.ShapeProgram.Shapes.ShapeType;
+
 public class Exit implements ActionMenu {
     @Override
     public String getAction() {
@@ -7,7 +9,7 @@ public class Exit implements ActionMenu {
     }
 
     @Override
-    public void executeAction() {
+    public void executeAction(ShapeType type) {
         System.out.println("Good bye!");
         System.exit(0);
     }

@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import static Lesson9.ShapeProgram.Lists.listOfShapes;
 
 public class StoreShapeService {
-    public void storeShape (Shape shape) {listOfShapes.add(shape);
+    public void storeShape (Shape shape) {
+        listOfShapes.add(shape);
     }
 }

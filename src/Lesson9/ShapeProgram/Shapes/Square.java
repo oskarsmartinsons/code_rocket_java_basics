@@ -5,8 +5,8 @@ import java.util.Objects;
 
 public class Square extends Shape {
     BigDecimal side;
-    public Square(ShapeType type, BigDecimal side) {
-        super(type);
+    public Square(BigDecimal side) {
+        this.setType(ShapeType.SQUARE);
         this.side = side;
     }
     public BigDecimal getSide() {

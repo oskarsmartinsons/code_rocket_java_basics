@@ -4,9 +4,9 @@ import java.math.BigDecimal;
 
 public abstract class Shape {
     private ShapeType type;
-    public Shape(ShapeType type) {
+/*    public Shape(ShapeType type) {
         this.type = type;
-    }
+    }*/
 
     public ShapeType getType() {
         return type;
