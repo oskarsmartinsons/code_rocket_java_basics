@@ -5,13 +5,10 @@ import Lesson9.ShapeProgram.ActionImplementations.ActionMenu;
 import java.util.List;
 
 public class UserMenu {
-
     private List<ActionMenu> actionsList;
-
     public UserMenu(List<ActionMenu> actionsList) {
         this.actionsList = actionsList;
     }
-
     public void start() {
         while(true) {
             // display all options/actions in menu
@@ -23,11 +20,9 @@ public class UserMenu {
             startAction(actionNr);
         }
     }
-
     public void startAction(Integer number) {
         actionsList.get(number).executeAction();
     }
-
     void printActions(List<ActionMenu> list) {
         System.out.println("---------------------------------------------");
         System.out.println("Choose action by number: ");

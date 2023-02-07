@@ -1,26 +1,20 @@
 package Lesson9.ShapeProgram;
 
-import Lesson9.ShapeProgram.ActionImplementations.ActionMenu;
-import Lesson9.ShapeProgram.ActionImplementations.Exit;
-import Lesson9.ShapeProgram.ActionImplementations.Start;
-import Lesson9.ShapeProgram.ActionImplementations.Store;
+import Lesson9.ShapeProgram.ActionImplementations.*;
+import Lesson9.ShapeProgram.Shapes.Shape;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Lists {
-
+    public static ArrayList<Shape> listOfShapes = new ArrayList<>();
     List<ActionMenu> getActions () {
         return List.of(
                 new Exit(),
-                new Start(),
-                new Store()
+                new StoreSquare(),
+                new SumSquaresPerimeter(),
+                new SumSquaresArea(),
+                new DisplayShapes()
         );
     }
-
-    List<ShapeMenu> getShapes () {
-        return List.of(
-                new TriangleOption()
-        );
-    }
-
 }
