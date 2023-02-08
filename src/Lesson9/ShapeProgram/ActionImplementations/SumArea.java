@@ -14,7 +14,7 @@ public class SumArea implements ActionMenu{
 
     @Override
     public String getAction() {
-        return "Sum areas of shape";
+        return "Sum areas of stored shape";
     }
 
     @Override

@@ -27,7 +27,7 @@ public class UserMenu {
             ShapeType type = shapeList.get(typeNr).getType();
 
             // display all options/actions in menu
-            printActions(actionsList);
+            printActions(actionsList, type);
             // collect action number form user
             Integer actionNr = userInput.inputNumber();
             // start specified action and type
@@ -40,9 +40,9 @@ public class UserMenu {
     public ShapeType getType(Integer number) {
         return shapeList.get(number).getType();
     }
-    void printActions(List<ActionMenu> list) {
+    void printActions(List<ActionMenu> list, ShapeType type) {
         System.out.println("---------------------------------------------");
-        System.out.println("Choose action for shape by number: ");
+        System.out.println("Choose action for " + type +" by number: ");
         for (int i = 0; i < list.size(); i++) {
             System.out.println(i+"."+list.get(i).getAction());
         }

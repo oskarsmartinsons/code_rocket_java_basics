@@ -1,7 +1,10 @@
 package Lesson9.ShapeProgram.Shapes;
 
 import java.math.BigDecimal;
+import java.math.MathContext;
 import java.util.Objects;
+
+import static java.lang.Math.sqrt;
 
 public class Triangle extends Shape{
     private final BigDecimal side1;
@@ -18,12 +21,18 @@ public class Triangle extends Shape{
 
     @Override
     public BigDecimal perimeter() {
-        return null;
+        return side1.add(side2).add(side3);
     }
 
     @Override
     public BigDecimal area() {
-        return null;
+        MathContext mc = new MathContext(2);
+        BigDecimal semiPerimeter =  perimeter().divide(BigDecimal.valueOf(2),mc);
+        return (semiPerimeter
+                .multiply(semiPerimeter.subtract(side1))
+                .multiply(semiPerimeter.subtract(side2))
+                .multiply(semiPerimeter.subtract(side3)))
+                .sqrt(mc);
     }
 
     @Override

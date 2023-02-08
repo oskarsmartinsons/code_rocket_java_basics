@@ -19,9 +19,7 @@ public class Store implements ActionMenu {
 
     @Override
     public void executeAction(ShapeType type) {
-        System.out.println("Store shape is running (choose shape):");
         storeShapeService.storeShape(type);
-        // display new menu
         System.out.println(type + " is saved!");
     }
 }

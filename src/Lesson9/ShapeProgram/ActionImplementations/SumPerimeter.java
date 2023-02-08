@@ -14,17 +14,11 @@ public class SumPerimeter implements ActionMenu {
 
     @Override
     public String getAction() {
-        return "Sum perimeters of shape";
+        return "Sum perimeters of stored shapes";
     }
 
     @Override
     public void executeAction(ShapeType type) {
- /*     UserInput userInput = new UserInput();
-        ShapeType type = userInput.inputType();
-        UserMenu userMenu = new UserMenu( );*/
-
-     //   ShapeType type = ShapeType.SQUARE;
-     //   SumPerimeterService sumPerimeterService = new SumPerimeterService();
         BigDecimal allPerimeters = sumPerimeterService.sumPerimeter(type);
         System.out.println("Sum of all " + type + " perimeters is: " + allPerimeters);
 

@@ -14,7 +14,7 @@ public class DisplayShapeService {
 
     public void displayShapes(ShapeType type) {
         for (Shape s : list) {
-            if (s.getType().equals(type)) System.out.println(list);
+            if (s.getType().equals(type)) System.out.println(s);
         }
     }
 }

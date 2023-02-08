@@ -12,7 +12,7 @@ public class DisplayShapes implements ActionMenu {
     }
     @Override
     public String getAction() {
-        return "Display all shapes";
+        return "Display all stored shapes of this type";
     }
 
     @Override
