@@ -7,7 +7,7 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 
 public class SumPerimeterService {
-    private ArrayList<Shape> shapeList;
+    private final ArrayList<Shape> shapeList;
     public SumPerimeterService(ArrayList<Shape> shapeList) {
         this.shapeList = shapeList;
     }

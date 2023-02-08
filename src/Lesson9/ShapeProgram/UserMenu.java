@@ -1,6 +1,6 @@
 package Lesson9.ShapeProgram;
 
-import Lesson9.ShapeProgram.ActionImplementations.ActionMenu;
+import Lesson9.ShapeProgram.ActionMenuImplementations.ActionMenu;
 import Lesson9.ShapeProgram.ShapeMenuImplementation.ShapeMenu;
 import Lesson9.ShapeProgram.Shapes.ShapeType;
 

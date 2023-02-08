@@ -1,20 +1,16 @@
 package Lesson9.ShapeProgram.Services;
 
-import Lesson9.ShapeProgram.Shapes.Shape;
 import Lesson9.ShapeProgram.Shapes.ShapeType;
 import Lesson9.ShapeProgram.UserInput;
-
-import java.util.ArrayList;
-
-import static Lesson9.ShapeProgram.Lists.listOfShapes;
+import static Lesson9.ShapeProgram.Lists.storedShapes;
 
 public class StoreShapeService {
     public void storeShape (ShapeType type) {
         UserInput userInput = new UserInput();
         switch (type){
-            case SQUARE -> listOfShapes.add(userInput.inputSquare());
-            case TRIANGLE -> listOfShapes.add(userInput.inputTriangle());
-            case CIRCLE -> listOfShapes.add(userInput.inputCircle());
+            case SQUARE -> storedShapes.add(userInput.inputSquare());
+            case TRIANGLE -> storedShapes.add(userInput.inputTriangle());
+            case CIRCLE -> storedShapes.add(userInput.inputCircle());
         }
     }
 }

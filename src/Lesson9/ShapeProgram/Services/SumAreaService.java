@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SumAreaService {
-    private List<Shape> list;
+    private final List<Shape> list;
     public SumAreaService(List<Shape> list) {
         this.list = list;
     }

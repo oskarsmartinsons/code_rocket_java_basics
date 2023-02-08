@@ -6,15 +6,20 @@ import Lesson9.ShapeProgram.Shapes.ShapeType;
 import java.util.List;
 
 public class DisplayShapeService {
-    private List<Shape> list;
-
+    private final List<Shape> list;
     public DisplayShapeService(List<Shape> list) {
         this.list = list;
     }
-
     public void displayShapes(ShapeType type) {
+        boolean isPresent = false;
         for (Shape s : list) {
-            if (s.getType().equals(type)) System.out.println(s);
+            if (s.getType().equals(type)) {
+                System.out.println(s);
+                isPresent = true;
+            }
+        }
+        if (!isPresent) {
+            System.out.println("Empty storage");
         }
     }
 }

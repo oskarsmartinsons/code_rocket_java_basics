@@ -4,10 +4,6 @@ import java.math.BigDecimal;
 
 public abstract class Shape {
     private ShapeType type;
-/*    public Shape(ShapeType type) {
-        this.type = type;
-    }*/
-
     public ShapeType getType() {
         return type;
     }
@@ -17,5 +13,4 @@ public abstract class Shape {
 
     public abstract BigDecimal perimeter();
     public abstract BigDecimal area();
-
 }
