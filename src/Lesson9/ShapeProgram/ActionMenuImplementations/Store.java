@@ -16,5 +16,6 @@ public class Store implements ActionMenu {
     public void executeAction(ShapeType type) {
         shapeRepositoryService.storeShapeInRepo(type);
         System.out.println(type + " is saved in REPO!");
+
     }
 }

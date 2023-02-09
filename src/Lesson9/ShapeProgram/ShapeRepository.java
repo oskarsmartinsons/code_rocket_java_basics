@@ -5,33 +5,26 @@ import Lesson9.ShapeProgram.Shapes.ShapeType;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 public class ShapeRepository {
-    public HashMap<ShapeType, ArrayList<Shape>> shapeRepository = new HashMap<>();
+    private static Integer shapeIdSequence = 0;
+    public HashMap<Integer, Shape> shapeRepo = new HashMap<>();
 
-    public void storeShape(Shape shape) {
-        ArrayList<Shape> repoList = new ArrayList<>();
-
-        if (!shapeRepository.containsKey(shape.getType())) {
-            repoList.add(shape);
-            shapeRepository.put(shape.getType(), repoList);
-        } else {
-            repoList = shapeRepository.get(shape.getType());
-            repoList.add(shape);
-        }
-        // shapeRepository.entrySet()
+    public Shape save(Shape shape) {
+        shapeRepo.put(shapeIdSequence,shape);
+        shapeIdSequence++;
+        return shape;
     }
 
-
-    /*    public Optional<ArrayList<Shape>> getShapesByType(ShapeType type) {
-            return Optional.ofNullable(shapeRepository.get(type));
-        }*/
-    public ArrayList<Shape> getShapesByType(ShapeType type) {
-        return shapeRepository.get(type);
+    public ArrayList<Shape> findShapesByType(ShapeType type) {
+        return (ArrayList<Shape>) shapeRepo.values().stream()
+                .filter(shape->shape.getType().equals(type))
+                .collect(Collectors.toList());
     }
 
     public void getRepo() {
-        System.out.println(shapeRepository);
+        System.out.println(shapeRepo);
     }
 
 }

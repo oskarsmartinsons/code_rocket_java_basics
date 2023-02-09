@@ -18,7 +18,7 @@ public class DisplayShapes implements ActionMenu {
     @Override
     public void executeAction(ShapeType type) {
         System.out.println("All stored " + type + "s in REPO:");
-        ArrayList<Shape> shapes = shapeRepositoryService.retrieveShapesByType(type);
-        shapeRepositoryService.printShapeList(shapes);
+        ArrayList<Shape> shapesOfOneType = shapeRepositoryService.retrieveByTypeFromRepo(type);
+        shapeRepositoryService.printShapeList(shapesOfOneType);
     }
 }
