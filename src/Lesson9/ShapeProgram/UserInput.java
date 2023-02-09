@@ -8,9 +8,9 @@ import java.math.BigDecimal;
 import java.util.Scanner;
 
 public class UserInput {
-    public Integer inputNumber() {
-        Scanner inputAction = new Scanner(System.in);
-        return inputAction.nextInt();
+    public Integer inputOptionNumber() {
+        Scanner inputNr = new Scanner(System.in);
+        return inputNr.nextInt();
     }
     public Square inputSquare() {
         System.out.println("Input side of the SQUARE");

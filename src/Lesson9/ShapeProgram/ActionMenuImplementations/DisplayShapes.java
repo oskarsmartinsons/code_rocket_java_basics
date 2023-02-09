@@ -1,12 +1,15 @@
 package Lesson9.ShapeProgram.ActionMenuImplementations;
 
-import Lesson9.ShapeProgram.Services.DisplayShapeService;
+import Lesson9.ShapeProgram.Services.ShapeRepositoryService;
+import Lesson9.ShapeProgram.Shapes.Shape;
 import Lesson9.ShapeProgram.Shapes.ShapeType;
 
+import java.util.ArrayList;
+
 public class DisplayShapes implements ActionMenu {
-    private final DisplayShapeService displayShapeService;
-    public DisplayShapes(DisplayShapeService displayShapeService) {
-        this.displayShapeService = displayShapeService;
+    private final ShapeRepositoryService shapeRepositoryService;
+    public DisplayShapes(ShapeRepositoryService shapeRepositoryService) {
+        this.shapeRepositoryService = shapeRepositoryService;
     }
     @Override
     public String getAction() {
@@ -14,7 +17,8 @@ public class DisplayShapes implements ActionMenu {
     }
     @Override
     public void executeAction(ShapeType type) {
-        System.out.println("All stored " + type + "s:");
-        displayShapeService.displayShapes(type);
+        System.out.println("All stored " + type + "s in REPO:");
+        ArrayList<Shape> shapes = shapeRepositoryService.retrieveShapesByType(type);
+        shapeRepositoryService.printShapeList(shapes);
     }
 }
