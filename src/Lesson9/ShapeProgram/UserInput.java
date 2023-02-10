@@ -20,8 +20,8 @@ public class UserInput {
     }
 
     public Integer inputOptionNumber(List optionList) {
-        Scanner input = new Scanner(System.in);
-        Integer inputNr = input.nextInt();
+        // get valid input
+        Integer inputNr = validationService.inputValidInteger();
         validationService.isInputInMenuRange(inputNr, optionList);
         return inputNr;
     }

@@ -6,7 +6,7 @@ import Lesson9.ShapeProgram.Shapes.ShapeType;
 import Lesson9.ShapeProgram.UserInput;
 
 public class TriangleType implements  ShapeMenu{
-    private ValidationService validationService;
+    private final ValidationService validationService;
 
     public TriangleType(ValidationService validationService) {
         this.validationService = validationService;

@@ -49,7 +49,7 @@ public class ShapeRepositoryService {
 
         BigDecimal allPerimeters = new BigDecimal("0.00");
         ArrayList<Shape> shapesInRepo = shapeRepository.findShapesByType(type)
-                                                        .orElseThrow(()-> new ShapeNotFoundException("There is no " + type + " in REPO"));
+                .orElseThrow(()-> new ShapeNotFoundException("There is no " + type + " in REPO"));
 
         if (!(shapesInRepo.isEmpty())) {
             for (Shape shape : shapesInRepo) {
