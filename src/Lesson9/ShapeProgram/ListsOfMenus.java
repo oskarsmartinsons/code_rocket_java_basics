@@ -12,6 +12,7 @@ public class ListsOfMenus {
     List<ActionMenu> getActionMenu(
                                    ShapeRepositoryService shapeRepositoryService,
                                    CalculationService calculationService
+                                //   ValidationService validationService
                                    )
     {
         return List.of(
@@ -25,11 +26,11 @@ public class ListsOfMenus {
         );
     }
 
-    List<ShapeMenu> getShapeMenu(){
+    List<ShapeMenu> getShapeMenu(ValidationService validationService){
         return List.of(
-                new SquareType(),
-                new TriangleType(),
-                new CircleType()
+                new SquareType(validationService),
+                new TriangleType(validationService),
+                new CircleType(validationService)
         );
     }
 }

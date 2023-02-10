@@ -17,10 +17,10 @@ public class ShapeRepository {
         return shape;
     }
 
-    public ArrayList<Shape> findShapesByType(ShapeType type) {
-        return (ArrayList<Shape>) shapeRepo.values().stream()
+    public Optional<ArrayList<Shape>> findShapesByType(ShapeType type) {
+        return Optional.of((ArrayList<Shape>) shapeRepo.values().stream()
                 .filter(shape->shape.getType().equals(type))
-                .collect(Collectors.toList());
+                .collect(Collectors.toList()));
     }
 
     public void getRepo() {

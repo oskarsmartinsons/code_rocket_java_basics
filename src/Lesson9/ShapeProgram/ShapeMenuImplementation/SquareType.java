@@ -1,5 +1,6 @@
 package Lesson9.ShapeProgram.ShapeMenuImplementation;
 
+import Lesson9.ShapeProgram.Services.ValidationService;
 import Lesson9.ShapeProgram.Shapes.Shape;
 import Lesson9.ShapeProgram.Shapes.ShapeType;
 import Lesson9.ShapeProgram.UserInput;
@@ -7,6 +8,12 @@ import Lesson9.ShapeProgram.UserInput;
 import java.math.BigDecimal;
 
 public class SquareType implements ShapeMenu{
+    private ValidationService validationService;
+
+    public SquareType(ValidationService validationService) {
+        this.validationService = validationService;
+    }
+
     @Override
     public ShapeType getType() {
         return ShapeType.SQUARE;
@@ -14,7 +21,7 @@ public class SquareType implements ShapeMenu{
 
     @Override
     public Shape getShape() {
-        UserInput userInput = new UserInput();
+        UserInput userInput = new UserInput(validationService);
         return userInput.inputSquare();
     }
 }

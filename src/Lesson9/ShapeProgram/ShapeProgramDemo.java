@@ -6,8 +6,10 @@ import java.util.List;
 
 public class ShapeProgramDemo {
     public static void main(String[] args) {
+        ValidationService validationService = new ValidationService();
+
         ListsOfMenus allMenus = new ListsOfMenus();
-        List<ShapeMenu> shapeMenu = allMenus.getShapeMenu();
+        List<ShapeMenu> shapeMenu = allMenus.getShapeMenu(validationService);
 
         ShapeRepository shapeRepository = new ShapeRepository();
 
@@ -16,7 +18,8 @@ public class ShapeProgramDemo {
 
         List<ActionMenu> actionMenu = allMenus.getActionMenu(shapeRepositoryService, calculationService);
 
-        UserInput userInput = new UserInput();
+        UserInput userInput = new UserInput(validationService);
+
         UserMenu userMenu = new UserMenu(userInput, actionMenu, shapeMenu);
         // start program
         userMenu.start();

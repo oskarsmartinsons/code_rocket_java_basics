@@ -5,6 +5,7 @@ import Lesson9.ShapeProgram.Shapes.Shape;
 import Lesson9.ShapeProgram.Shapes.ShapeType;
 
 import java.util.ArrayList;
+import java.util.Optional;
 
 public class DisplayShapes implements ActionMenu {
     private final ShapeRepositoryService shapeRepositoryService;

@@ -19,23 +19,26 @@ public class UserMenu {
 
     public void start() {
         while(true) {
-            // display shapes
+            try {
+            // display all shapes in menu > collect shape number > get shape type
             printTypeMenu(shapeList);
-            // collect shape number from user
-            Integer typeNr = userInput.inputOptionNumber();
-            // get shape type from user
+            Integer typeNr = userInput.inputOptionNumber(shapeList);
             ShapeType type = shapeList.get(typeNr).getType();
 
-            // display all options/actions in menu
+            // display all actions in menu > collect action number > start action
             printActionMenu(actionsList, type);
-            // collect action number form user
-            Integer actionNr = userInput.inputOptionNumber();
+            Integer actionNr = userInput.inputOptionNumber(actionsList);
+
             // start specified action and type
             startAction(actionNr,type);
+
+            } catch (Exception e) {
+                System.out.println(e);
+            }
         }
     }
-    public void startAction(Integer number, ShapeType type) {
-        actionsList.get(number).executeAction(type);
+    public void startAction(Integer actionNumber, ShapeType type) {
+        actionsList.get(actionNumber).executeAction(type);
     }
 
     void printActionMenu(List<ActionMenu> list, ShapeType type) {
