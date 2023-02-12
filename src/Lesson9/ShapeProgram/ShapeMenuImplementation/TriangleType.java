@@ -13,8 +13,14 @@ public class TriangleType implements  ShapeMenu{
     }
 
     @Override
-    public ShapeType getType() {
+    public ShapeType getShapeType() {
         return ShapeType.TRIANGLE;
+    }
+
+    @Override
+    public Integer getShapeId() {
+        UserInput userInput = new UserInput(validationService);
+        return userInput.inputId();
     }
 
     @Override

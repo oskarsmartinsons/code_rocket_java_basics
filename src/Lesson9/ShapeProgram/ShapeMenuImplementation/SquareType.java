@@ -15,8 +15,14 @@ public class SquareType implements ShapeMenu{
     }
 
     @Override
-    public ShapeType getType() {
+    public ShapeType getShapeType() {
         return ShapeType.SQUARE;
+    }
+
+    @Override
+    public Integer getShapeId() {
+        UserInput userInput = new UserInput(validationService);
+        return userInput.inputId();
     }
 
     @Override

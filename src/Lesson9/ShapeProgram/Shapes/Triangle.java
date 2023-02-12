@@ -12,11 +12,20 @@ public class Triangle extends Shape{
     private final BigDecimal side3;
 
     public Triangle(BigDecimal side1, BigDecimal side2, BigDecimal side3) {
-     //   super(type);
+        this.setId(0);
         this.setType(ShapeType.TRIANGLE);
         this.side1 = side1;
         this.side2 = side2;
         this.side3 = side3;
+    }
+    public BigDecimal getSide1() {
+        return side1;
+    }
+    public BigDecimal getSide2() {
+        return side2;
+    }
+    public BigDecimal getSide3() {
+        return side3;
     }
 
     @Override
@@ -51,9 +60,10 @@ public class Triangle extends Shape{
     @Override
     public String toString() {
         return "Triangle{" +
-                "side1=" + side1 +
+                "Id:" + getId()+
+                ", side1=" + side1 +
                 ", side2=" + side2 +
                 ", side3=" + side3 +
-                '}';
+                "}";
     }
 }

@@ -16,11 +16,13 @@ public class ListsOfMenus {
     {
         return List.of(
                 new Store(shapeRepositoryService),
+                new DisplayShapes(shapeRepositoryService),
                 new SumPerimeter(shapeRepositoryService),
                 new SumArea(shapeRepositoryService),
+                new CalculatePerimeterForRepoShape(shapeRepositoryService),
+                new CalculateAreaForRepoShape(shapeRepositoryService),
                 new CalculatePerimeter(calculationService),
                 new CalculateArea(calculationService),
-                new DisplayShapes(shapeRepositoryService),
                 new Exit()
         );
     }

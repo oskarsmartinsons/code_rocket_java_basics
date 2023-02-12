@@ -5,10 +5,12 @@ import java.util.Objects;
 
 public class Square extends Shape {
     BigDecimal side;
+
     public Square(BigDecimal side) {
+        this.setId(0);
         this.setType(ShapeType.SQUARE);
         this.side = side;
-    }
+        }
     public BigDecimal getSide() {
         return side;
     }
@@ -38,7 +40,8 @@ public class Square extends Shape {
     @Override
     public String toString() {
         return "Square{" +
-                "side=" + side +
+                "Id:" + getId()+
+                ", side=" + side +
                 '}';
     }
 }

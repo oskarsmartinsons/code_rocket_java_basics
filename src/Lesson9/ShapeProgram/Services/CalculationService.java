@@ -17,7 +17,7 @@ public class CalculationService {
 
         BigDecimal perimeter= new BigDecimal("0.00");
         for (ShapeMenu s: shapeMenu) {
-            if(s.getType().equals(type)){
+            if(s.getShapeType().equals(type)){
                perimeter =  s.getShape().perimeter();
             }
         }
@@ -29,7 +29,7 @@ public class CalculationService {
 
         BigDecimal area= new BigDecimal("0.00");
         for (ShapeMenu s: shapeMenu) {
-            if(s.getType().equals(type)){
+            if(s.getShapeType().equals(type)){
                 area =  s.getShape().area();
             }
         }

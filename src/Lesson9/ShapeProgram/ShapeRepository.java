@@ -12,6 +12,7 @@ public class ShapeRepository {
     public HashMap<Integer, Shape> shapeRepo = new HashMap<>();
 
     public Shape save(Shape shape) {
+        shape.setId(shapeIdSequence);
         shapeRepo.put(shapeIdSequence,shape);
         shapeIdSequence++;
         return shape;
@@ -21,5 +22,12 @@ public class ShapeRepository {
         return Optional.of((ArrayList<Shape>) shapeRepo.values().stream()
                 .filter(shape->shape.getType().equals(type))
                 .collect(Collectors.toList()));
+    }
+
+    public Optional<Shape> findShapesById(Integer id) {
+        return Optional.ofNullable(shapeRepo.get(id));
+    }
+    public void getRepo() {
+        System.out.println(shapeRepo);
     }
 }

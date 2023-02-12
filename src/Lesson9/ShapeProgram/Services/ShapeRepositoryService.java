@@ -9,6 +9,7 @@ import Lesson9.ShapeProgram.Exceptions.ShapeNotFoundException;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class ShapeRepositoryService {
     private final List<ShapeMenu> shapeMenu;
@@ -23,7 +24,7 @@ public class ShapeRepositoryService {
         if(type==null) throw new ArgumentIsNullException("Argument ShapeType is null!");
 
         for (ShapeMenu s:shapeMenu) {
-            if(s.getType().equals(type)){
+            if(s.getShapeType().equals(type)){
                 Shape shape = s.getShape();
                 shapeRepository.save(shape);
             }
@@ -41,7 +42,9 @@ public class ShapeRepositoryService {
         if(shapesToPrint==null) throw new ArgumentIsNullException("Argument ArrayList<Shape> is null!");
         if (shapesToPrint.size()==0) {
             System.out.println("There is no such shapes in REPO");
-        } else System.out.println(shapesToPrint);
+        } else {
+            for (Shape s:shapesToPrint) System.out.println(s);
+        }
     }
 
     public BigDecimal sumShapePerimeterByType(ShapeType type) {
@@ -72,6 +75,30 @@ public class ShapeRepositoryService {
         } else allArea = BigDecimal.valueOf(0);
 
         return allArea;
+    }
+
+    public BigDecimal calculatePerimeterForShapeId(ShapeType type) {
+        Integer id=0;
+        for (ShapeMenu s: shapeMenu) {
+            if(s.getShapeType().equals(type)){
+                id = s.getShapeId();
+            }
+        }
+        Shape myShape = shapeRepository.findShapesById(id)
+                .orElseThrow(()-> new ShapeNotFoundException("Shape with this id is not found"));
+        return myShape.perimeter();
+    }
+
+    public BigDecimal calculateAreaForShapeId(ShapeType type) {
+        Integer id=0;
+        for (ShapeMenu s: shapeMenu) {
+            if(s.getShapeType().equals(type)){
+                id = s.getShapeId();
+            }
+        }
+        Shape myShape = shapeRepository.findShapesById(id)
+                .orElseThrow(()-> new ShapeNotFoundException("Shape with this id is not found"));
+        return myShape.area();
     }
 
 }

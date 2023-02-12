@@ -15,7 +15,7 @@ public class CalculateArea implements ActionMenu{
 
     @Override
     public String getAction() {
-        return "Calculate Area";
+        return "Calculate Area for New Shape";
     }
 
     @Override

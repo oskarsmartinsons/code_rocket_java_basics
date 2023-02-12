@@ -2,6 +2,7 @@ package Lesson9.ShapeProgram;
 
 import Lesson9.ShapeProgram.Services.ValidationService;
 import Lesson9.ShapeProgram.Shapes.Circle;
+import Lesson9.ShapeProgram.Shapes.ShapeType;
 import Lesson9.ShapeProgram.Shapes.Square;
 import Lesson9.ShapeProgram.Shapes.Triangle;
 
@@ -15,6 +16,13 @@ public class UserInput {
 
     public UserInput(ValidationService validationService) {
         this.validationService = validationService;
+    }
+
+    public Integer inputId() {
+        System.out.println("Input shape Id: ");
+        Integer inputId = inputValidInteger();
+        validationService.isInputPositiveInteger(inputId);
+        return inputId;
     }
 
     public Integer inputOptionNumber(List optionList) {

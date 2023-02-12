@@ -12,7 +12,7 @@ public class CalculatePerimeter implements ActionMenu {
 
     @Override
     public String getAction() {
-        return "Calculate Perimeter";
+        return "Calculate Perimeter for New Shape";
     }
     @Override
     public void executeAction(ShapeType type) {

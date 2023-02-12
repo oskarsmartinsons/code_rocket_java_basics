@@ -22,4 +22,11 @@ public class ValidationService {
             throw new UserInputException("Number must be larger than zero");
         }
     }
+
+    // validation logic for shape id
+    public void isInputPositiveInteger(Integer input) {
+        if (input < 0) {
+            throw new UserInputException("Number must be larger than zero");
+        }
+    }
 }
