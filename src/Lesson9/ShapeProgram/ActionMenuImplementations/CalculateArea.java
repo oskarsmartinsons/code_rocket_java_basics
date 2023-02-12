@@ -21,6 +21,6 @@ public class CalculateArea implements ActionMenu{
     @Override
     public void executeAction(ShapeType type) {
         BigDecimal area = calculationService.calculateArea(type);
-        System.out.println("Area of " + type + " is: " + area);
+        System.out.println("Area of the " + type + " is: " + area);
     }
 }

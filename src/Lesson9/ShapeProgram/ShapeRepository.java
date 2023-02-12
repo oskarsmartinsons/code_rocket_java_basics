@@ -22,9 +22,4 @@ public class ShapeRepository {
                 .filter(shape->shape.getType().equals(type))
                 .collect(Collectors.toList()));
     }
-
-    public void getRepo() {
-        System.out.println(shapeRepo);
-    }
-
 }

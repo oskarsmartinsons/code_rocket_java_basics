@@ -5,7 +5,6 @@ import Lesson9.ShapeProgram.Shapes.Shape;
 import Lesson9.ShapeProgram.Shapes.ShapeType;
 
 import java.util.ArrayList;
-import java.util.Optional;
 
 public class DisplayShapes implements ActionMenu {
     private final ShapeRepositoryService shapeRepositoryService;
@@ -19,7 +18,7 @@ public class DisplayShapes implements ActionMenu {
     @Override
     public void executeAction(ShapeType type) {
         System.out.println("All stored " + type + "s in REPO:");
-        ArrayList<Shape> shapesOfOneType = shapeRepositoryService.retrieveByTypeFromRepo(type);
+        ArrayList<Shape> shapesOfOneType = shapeRepositoryService.retrieveShapesByTypeFromRepo(type);
         shapeRepositoryService.printShapeList(shapesOfOneType);
     }
 }

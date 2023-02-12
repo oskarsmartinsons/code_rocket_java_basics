@@ -3,8 +3,8 @@ import Lesson9.ShapeProgram.ShapeMenuImplementation.ShapeMenu;
 import Lesson9.ShapeProgram.ShapeRepository;
 import Lesson9.ShapeProgram.Shapes.Shape;
 import Lesson9.ShapeProgram.Shapes.ShapeType;
-import Lesson9.ShapeProgram.Validations.ArgumentIsNullException;
-import Lesson9.ShapeProgram.Validations.ShapeNotFoundException;
+import Lesson9.ShapeProgram.Exceptions.ArgumentIsNullException;
+import Lesson9.ShapeProgram.Exceptions.ShapeNotFoundException;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -30,11 +30,11 @@ public class ShapeRepositoryService {
         }
     }
 
-    public ArrayList<Shape> retrieveByTypeFromRepo(ShapeType type) {
+    public ArrayList<Shape> retrieveShapesByTypeFromRepo(ShapeType type) {
         if(type==null) throw new ArgumentIsNullException("Argument ShapeType is null!");
         return
                 shapeRepository.findShapesByType(type)
-                                .orElseThrow(()-> new ShapeNotFoundException("There is not shapes in REPO"));
+                                .orElseThrow(()-> new ShapeNotFoundException("Shape repository is null"));
     }
 
     public void printShapeList (ArrayList<Shape> shapesToPrint) {
@@ -48,16 +48,14 @@ public class ShapeRepositoryService {
         if(type==null) throw new ArgumentIsNullException("Argument ShapeType is null!");
 
         BigDecimal allPerimeters = new BigDecimal("0.00");
-        ArrayList<Shape> shapesInRepo = shapeRepository.findShapesByType(type)
-                .orElseThrow(()-> new ShapeNotFoundException("There is no " + type + " in REPO"));
+        ArrayList<Shape> shapesInRepo = retrieveShapesByTypeFromRepo(type);
 
         if (!(shapesInRepo.isEmpty())) {
             for (Shape shape : shapesInRepo) {
                 allPerimeters = allPerimeters.add(shape.perimeter());
             }
-        }else {
-            allPerimeters = BigDecimal.valueOf(0);
-        }
+        } else allPerimeters = BigDecimal.valueOf(0);
+
         return allPerimeters ;
     }
 
@@ -65,13 +63,12 @@ public class ShapeRepositoryService {
         if(type==null) throw new ArgumentIsNullException("Argument ShapeType is null!");
 
         BigDecimal allArea = new BigDecimal("0.00");
-        ArrayList<Shape> shapesInRepo = shapeRepository.findShapesByType(type)
-                .orElseThrow(()-> new ShapeNotFoundException("There is no " + type + " in REPO"));
+        ArrayList<Shape> shapesInRepo = retrieveShapesByTypeFromRepo(type);
 
-        if (!(shapesInRepo==null)) {
-        for (Shape shape : shapesInRepo) {
-            allArea = allArea.add(shape.area());
-        }
+        if (!(shapesInRepo.isEmpty())) {
+            for (Shape shape : shapesInRepo) {
+                allArea = allArea.add(shape.area());
+            }
         } else allArea = BigDecimal.valueOf(0);
 
         return allArea;

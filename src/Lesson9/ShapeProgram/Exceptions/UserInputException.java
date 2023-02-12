@@ -1,7 +1,4 @@
-package Lesson9.ShapeProgram.Validations;
-
-import java.math.BigDecimal;
-import java.util.InputMismatchException;
+package Lesson9.ShapeProgram.Exceptions;
 
 public class UserInputException extends RuntimeException{
 

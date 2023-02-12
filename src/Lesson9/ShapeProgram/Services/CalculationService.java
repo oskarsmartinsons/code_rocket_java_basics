@@ -1,7 +1,7 @@
 package Lesson9.ShapeProgram.Services;
 import Lesson9.ShapeProgram.ShapeMenuImplementation.ShapeMenu;
 import Lesson9.ShapeProgram.Shapes.ShapeType;
-import Lesson9.ShapeProgram.Validations.ArgumentIsNullException;
+import Lesson9.ShapeProgram.Exceptions.ArgumentIsNullException;
 
 import java.math.BigDecimal;
 import java.util.List;

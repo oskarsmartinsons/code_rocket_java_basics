@@ -17,6 +17,6 @@ public class CalculatePerimeter implements ActionMenu {
     @Override
     public void executeAction(ShapeType type) {
         BigDecimal perimeter = calculationService.calculatePerimeter(type);
-        System.out.println("Perimeter of " + type + " in REPO is: " + perimeter );
+        System.out.println("Perimeter of the " + type + " is: " + perimeter );
     }
 }

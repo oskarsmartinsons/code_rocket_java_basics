@@ -1,6 +1,6 @@
 package Lesson9.ShapeProgram.Services;
 
-import Lesson9.ShapeProgram.Validations.UserInputException;
+import Lesson9.ShapeProgram.Exceptions.UserInputException;
 
 import java.math.BigDecimal;
 import java.util.InputMismatchException;
@@ -16,39 +16,10 @@ public class ValidationService {
         }
     }
 
-    // validation logic for BigDecimal
+    // validation logic for shape parameters
     public void isInputPositiveBigDecimal(BigDecimal input) {
-        if (input.compareTo(BigDecimal.ZERO) <= -1) {
-            throw new UserInputException("Number must be positive");
+        if (input.compareTo(BigDecimal.ZERO) <= 0) {
+            throw new UserInputException("Number must be larger than zero");
         }
-    }
-    public BigDecimal inputValidBigDecimal() {
-        BigDecimal parameter = new BigDecimal("0.00");
-        try {
-            Scanner inputAction = new Scanner(System.in);
-            parameter = inputAction.nextBigDecimal();
-            isInputPositiveBigDecimal(parameter);
-        } catch (InputMismatchException inputMismatchException) {
-            throw new InputMismatchException("Please enter digit");
-        }
-        return parameter;
-    }
-
-    // validation logic for Integers
-    public void isInputPositiveInteger(Integer input) {
-        if (input <= -1) {
-            throw new UserInputException("Number must be positive");
-        }
-    }
-    public Integer inputValidInteger() {
-        Integer parameter = 0;
-        try {
-            Scanner inputAction = new Scanner(System.in);
-            parameter = inputAction.nextInt();
-            isInputPositiveInteger(parameter);
-        } catch (InputMismatchException inputMismatchException) {
-            throw new InputMismatchException("Please enter digit");
-        }
-        return parameter;
     }
 }

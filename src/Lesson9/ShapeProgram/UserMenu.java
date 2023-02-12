@@ -29,7 +29,7 @@ public class UserMenu {
             printActionMenu(actionsList, type);
             Integer actionNr = userInput.inputOptionNumber(actionsList);
 
-            // start specified action and type
+            // start specified action for selected type
             startAction(actionNr,type);
 
             } catch (Exception e) {
