@@ -1,6 +1,7 @@
 package Lesson9.ShapeProgram;
 
 import Lesson9.ShapeProgram.ActionMenuImplementations.ActionMenu;
+import Lesson9.ShapeProgram.Exceptions.ArgumentIsNullException;
 import Lesson9.ShapeProgram.ShapeMenuImplementation.ShapeMenu;
 import Lesson9.ShapeProgram.Shapes.ShapeType;
 
@@ -38,10 +39,12 @@ public class UserMenu {
         }
     }
     public void startAction(Integer actionNumber, ShapeType type) {
+        if(actionNumber==null) {throw new ArgumentIsNullException("Argument Action Number is null!");}
         actionsList.get(actionNumber).executeAction(type);
     }
 
     void printActionMenu(List<ActionMenu> list, ShapeType type) {
+        if(list==null) {throw new ArgumentIsNullException("Argument List<ActionMenu> is null!");}
         System.out.println("---------------------------------------------");
         System.out.println("Choose action for " + type +" by number: ");
         for (int i = 0; i < list.size(); i++) {
@@ -51,6 +54,7 @@ public class UserMenu {
     }
 
     void printTypeMenu(List<ShapeMenu> list) {
+        if(list==null) {throw new ArgumentIsNullException("Argument List<ShapeMenu> is null!");}
         System.out.println("---------------------------------------------");
         System.out.println("Choose shape by number: ");
         for (int i = 0; i < list.size(); i++) {

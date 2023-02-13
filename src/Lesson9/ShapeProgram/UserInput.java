@@ -2,7 +2,6 @@ package Lesson9.ShapeProgram;
 
 import Lesson9.ShapeProgram.Services.ValidationService;
 import Lesson9.ShapeProgram.Shapes.Circle;
-import Lesson9.ShapeProgram.Shapes.ShapeType;
 import Lesson9.ShapeProgram.Shapes.Square;
 import Lesson9.ShapeProgram.Shapes.Triangle;
 

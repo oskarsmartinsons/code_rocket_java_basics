@@ -12,7 +12,6 @@ public class CircleType implements ShapeMenu {
         this.validationService = validationService;
     }
 
-
     @Override
     public ShapeType getShapeType() {
         return ShapeType.CIRCLE;

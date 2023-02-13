@@ -9,7 +9,6 @@ import Lesson9.ShapeProgram.Exceptions.ShapeNotFoundException;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 public class ShapeRepositoryService {
     private final List<ShapeMenu> shapeMenu;
