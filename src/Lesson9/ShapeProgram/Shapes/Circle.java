@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 import java.util.Objects;
 
 public class Circle extends Shape{
-    private final BigDecimal PI = new BigDecimal("3.14");
+    private final BigDecimal PI = new BigDecimal("3.14159");
     private BigDecimal radius;
     public Circle(BigDecimal radius) {
         this.setId(0);

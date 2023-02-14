@@ -19,15 +19,16 @@ public class ShapeRepositoryService {
         this.shapeRepository = shapeRepository;
     }
 
-    public void storeShapeInRepo(ShapeType type) {
+    public Shape storeShapeInRepo(ShapeType type) {
         if(type==null) throw new ArgumentIsNullException("Argument ShapeType is null!");
-
+        Shape savedShape = null;
         for (ShapeMenu s:shapeMenu) {
             if(s.getShapeType().equals(type)){
                 Shape shape = s.getShape();
-                shapeRepository.save(shape);
+                savedShape = shapeRepository.save(shape);
             }
         }
+        return savedShape;
     }
 
     public ArrayList<Shape> retrieveShapesByTypeFromRepo(ShapeType type) {

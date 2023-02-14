@@ -28,20 +28,4 @@ public class ShapeRepository {
     public Optional<Shape> findShapesById(Integer id) {
         return Optional.ofNullable(shapeRepo.get(id));
     }
-    public void getRepo() {
-        System.out.println(shapeRepo);
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        ShapeRepository that = (ShapeRepository) o;
-        return Objects.equals(shapeRepo, that.shapeRepo);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(shapeRepo);
-    }
 }

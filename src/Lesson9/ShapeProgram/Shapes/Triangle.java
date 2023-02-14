@@ -2,6 +2,7 @@ package Lesson9.ShapeProgram.Shapes;
 
 import java.math.BigDecimal;
 import java.math.MathContext;
+import java.math.RoundingMode;
 import java.util.Objects;
 
 import static java.lang.Math.sqrt;
@@ -35,13 +36,13 @@ public class Triangle extends Shape{
 
     @Override
     public BigDecimal area() {
-        MathContext mc = new MathContext(2);
-        BigDecimal semiPerimeter =  perimeter().divide(BigDecimal.valueOf(2),mc);
+        MathContext mc = new MathContext(3);
+        BigDecimal semiPerimeter =  perimeter().divide(BigDecimal.valueOf(2));
         return (semiPerimeter
                 .multiply(semiPerimeter.subtract(side1))
                 .multiply(semiPerimeter.subtract(side2))
                 .multiply(semiPerimeter.subtract(side3)))
-                .sqrt(mc);
+                .sqrt(mc).setScale(2, RoundingMode.CEILING);
     }
 
     @Override
