@@ -1,20 +1,45 @@
 package Lesson10.libraryapp.book;
 
+import Lesson10.libraryapp.UserInput;
+import Lesson10.libraryapp.author.Author;
+import Lesson10.libraryapp.author.AuthorDto;
+import Lesson10.libraryapp.author.AuthorService;
+
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class BookService {
+    private final UserInput userInput;
     private final BookRepository bookRepository;
     private final BookDtoConverter bookDtoConverter;
+    private final AuthorService authorService;
 
-    public BookService(BookRepository bookRepository, BookDtoConverter bookDtoConverter) {
+    public BookService(UserInput userInput, BookRepository bookRepository, BookDtoConverter bookDtoConverter, AuthorService authorService) {
+        this.userInput = userInput;
         this.bookRepository = bookRepository;
         this.bookDtoConverter = bookDtoConverter;
+        this.authorService = authorService;
+    }
+
+    public Book createBookWithAuthor(){
+        Author author = authorService.create();
+     //   AuthorDto savedAuthor = authorService.save(author);
+        Book book = userInput.inputBook();
+        book.setAuthor(author);
+        return book;
+    }
+
+    public void addAuthorToBook(Author author, Book book) {
+        book.setAuthor(author);
     }
 
     public BookDto save (Book book) {
         Book savedBook = bookRepository.save(book);
         return bookDtoConverter.convert(savedBook);
+    }
+
+    public String inputPrefix(){
+        return userInput.inputText();
     }
 
     public List<BookDto> findAllBooksWithPrefix(String prefix){

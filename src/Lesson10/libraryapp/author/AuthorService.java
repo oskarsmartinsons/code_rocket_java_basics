@@ -2,13 +2,22 @@ package Lesson10.libraryapp.author;
 import Lesson10.libraryapp.*;
 
 public class AuthorService {
-
+    private final UserInput userInput;
     private final AuthorRepository authorRepository;
     private final AuthorDtoConverter authorDtoConverter;
 
-    public AuthorService(AuthorRepository authorRepository, AuthorDtoConverter authorDtoConverter) {
+    public AuthorService(UserInput userInput, AuthorRepository authorRepository, AuthorDtoConverter authorDtoConverter) {
+        this.userInput = userInput;
         this.authorRepository = authorRepository;
         this.authorDtoConverter = authorDtoConverter;
+    }
+
+    public Author create() {
+        return userInput.inputAuthor();
+    }
+
+    public Integer inputAuthorId(){
+        return userInput.inputId();
     }
 
     public AuthorDto save(Author author) {
