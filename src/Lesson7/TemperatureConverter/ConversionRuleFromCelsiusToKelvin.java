@@ -1,5 +1,8 @@
 package Lesson7.TemperatureConverter;
 
+import Lesson7.TemperatureConverter.Requests.FormulaDetailsRequest;
+import Lesson7.TemperatureConverter.Requests.TemperatureRequest;
+
 public class ConversionRuleFromCelsiusToKelvin implements TemperatureConverter, TemperatureFormula{
     private final double K = 273.15;
     @Override
@@ -13,12 +16,12 @@ public class ConversionRuleFromCelsiusToKelvin implements TemperatureConverter, 
     }
 
     @Override
-    public boolean isProperFormula(FormulaDetails formulaDetails) {
+    public boolean isProperFormula(FormulaDetailsRequest formulaDetails) {
         return (formulaDetails.getUnitFrom() == 'C') && (formulaDetails.getUnitTo() == 'K');
     }
 
     @Override
-    public String display(FormulaDetails formulaDetails) {
+    public String display(FormulaDetailsRequest formulaDetails) {
         return "Formula to C->K: tK = tC + 273.15";
     }
 }

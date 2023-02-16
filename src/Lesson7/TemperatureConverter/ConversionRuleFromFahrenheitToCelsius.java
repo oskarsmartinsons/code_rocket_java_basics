@@ -1,5 +1,8 @@
 package Lesson7.TemperatureConverter;
 
+import Lesson7.TemperatureConverter.Requests.FormulaDetailsRequest;
+import Lesson7.TemperatureConverter.Requests.TemperatureRequest;
+
 public class ConversionRuleFromFahrenheitToCelsius implements TemperatureConverter, TemperatureFormula{
     private final double CONST1 = (double) 5/9;
     private final int CONST2 = 32;
@@ -13,12 +16,12 @@ public class ConversionRuleFromFahrenheitToCelsius implements TemperatureConvert
     }
 
     @Override
-    public boolean isProperFormula(FormulaDetails formulaDetails) {
+    public boolean isProperFormula(FormulaDetailsRequest formulaDetails) {
         return  (formulaDetails.getUnitFrom() == 'F') && (formulaDetails.getUnitTo() == 'C');
     }
 
     @Override
-    public String display(FormulaDetails formulaDetails) {
+    public String display(FormulaDetailsRequest formulaDetails) {
         return "Formula to F->C: tC = (tF - 32) * 5/9";
     }
 }

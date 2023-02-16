@@ -1,5 +1,11 @@
 package Lesson7.TemperatureConverter;
 
+import Lesson7.TemperatureConverter.ActionImplementations.ActionMenu;
+import Lesson7.TemperatureConverter.Services.TemperatureConversionService;
+import Lesson7.TemperatureConverter.Services.TemperatureFormulaService;
+import Lesson7.TemperatureConverter.Services.TemperatureHistoryService;
+import Lesson7.TemperatureConverter.Services.TemperatureVerificationService;
+
 import java.util.ArrayList;
 
 public class TemperatureServiceDemo {

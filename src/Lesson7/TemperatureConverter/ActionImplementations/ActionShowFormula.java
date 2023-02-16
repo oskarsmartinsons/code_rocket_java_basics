@@ -1,4 +1,8 @@
-package Lesson7.TemperatureConverter;
+package Lesson7.TemperatureConverter.ActionImplementations;
+
+import Lesson7.TemperatureConverter.Requests.FormulaDetailsRequest;
+import Lesson7.TemperatureConverter.Services.TemperatureFormulaService;
+import Lesson7.TemperatureConverter.UserInput;
 
 public class ActionShowFormula implements ActionMenu{
     private final UserInput userInput;
@@ -16,7 +20,7 @@ public class ActionShowFormula implements ActionMenu{
     @Override
     public void executeAction() {
         System.out.println("\nShow conversion formula:");
-        FormulaDetails formulaDetails =  userInput.inputFormulaDetails();
+        FormulaDetailsRequest formulaDetails =  userInput.inputFormulaDetails();
         temperatureFormulaService.displayFormula(formulaDetails);
     }
 }

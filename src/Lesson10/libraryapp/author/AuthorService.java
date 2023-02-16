@@ -1,5 +1,8 @@
 package Lesson10.libraryapp.author;
 import Lesson10.libraryapp.*;
+import Lesson10.libraryapp.book.Book;
+
+import java.util.List;
 
 public class AuthorService {
     private final UserInput userInput;
@@ -41,6 +44,17 @@ public class AuthorService {
     public String getAuthorNameById(Integer id) {
         return authorRepository.findAuthorById(id)
                 .map(Author::getName)
+                .orElseThrow(() -> new EntityNotFoundException("Author not found with id = " + id));
+    }
+
+    public Author addBookInTheList(Author author, Book book) {
+        List<Book> bookList=author.getBooks();
+        bookList.add(book);
+        return author;
+    }
+
+    public Author searchAuthorById(Integer id) {
+        return authorRepository.findAuthorById(id)
                 .orElseThrow(() -> new EntityNotFoundException("Author not found with id = " + id));
     }
 }

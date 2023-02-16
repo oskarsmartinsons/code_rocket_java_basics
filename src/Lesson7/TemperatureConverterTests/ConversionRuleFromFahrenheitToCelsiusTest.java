@@ -1,7 +1,7 @@
 package Lesson7.TemperatureConverterTests;
 
 import Lesson7.TemperatureConverter.ConversionRuleFromFahrenheitToCelsius;
-import Lesson7.TemperatureConverter.TemperatureRequest;
+import Lesson7.TemperatureConverter.Requests.TemperatureRequest;
 
 public class ConversionRuleFromFahrenheitToCelsiusTest {
     public static void testFahrenheitToCelsiusConversion(double tempInFahrenheit, double expectedResult){

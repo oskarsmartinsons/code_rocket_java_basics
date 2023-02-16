@@ -1,4 +1,6 @@
-package Lesson7.TemperatureConverter;
+package Lesson7.TemperatureConverter.Services;
+
+import Lesson7.TemperatureConverter.ActionImplementations.ActionConvert;
 
 public class TemperatureHistoryService {
     public void showHistory() {

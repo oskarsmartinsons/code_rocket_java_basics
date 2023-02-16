@@ -9,7 +9,7 @@ public class Book {
 
     private Integer id;
     private String title;
-    private Author author;
+    private Integer authorId;
 
     public Integer getId() {
         return id;
@@ -27,11 +27,12 @@ public class Book {
         this.title = title;
     }
 
-    public Author getAuthor() {
-        return author;
+    public Integer getAuthorId() {
+        return authorId;
     }
-    public void setAuthor(Author author) {
-        this.author = author;
+
+    public void setAuthorId(Integer authorId) {
+        this.authorId = authorId;
     }
 
     @Override
@@ -39,20 +40,21 @@ public class Book {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Book book = (Book) o;
-        return Objects.equals(id, book.id) && Objects.equals(title, book.title) && Objects.equals(author, book.author);
+        return Objects.equals(id, book.id) && Objects.equals(title, book.title) && Objects.equals(authorId, book.authorId);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, title, author);
+        return Objects.hash(id, title, authorId);
     }
 
     @Override
-    public String toString() {
+    public String
+    toString() {
         return "Book{" +
                 "id=" + id +
                 ", title='" + title + '\'' +
-                ", author=" + author +
+                ", authorId=" + authorId +
                 '}';
     }
 }

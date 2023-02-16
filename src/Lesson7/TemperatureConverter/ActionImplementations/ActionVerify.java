@@ -1,4 +1,8 @@
-package Lesson7.TemperatureConverter;
+package Lesson7.TemperatureConverter.ActionImplementations;
+
+import Lesson7.TemperatureConverter.Services.TemperatureVerificationService;
+import Lesson7.TemperatureConverter.UserInput;
+import Lesson7.TemperatureConverter.VerificationDetails;
 
 public class ActionVerify implements ActionMenu{
     private final UserInput userInput;

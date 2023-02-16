@@ -12,9 +12,13 @@ public class UserMenu {
 
     public void start() {
         while(true) {
-            printActionMenu();
-            Integer actionNumber = inputActionNr();
-            executeAction(actionNumber);
+            try {
+                printActionMenu();
+                Integer actionNumber = inputActionNr();
+                executeAction(actionNumber);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
     }
 

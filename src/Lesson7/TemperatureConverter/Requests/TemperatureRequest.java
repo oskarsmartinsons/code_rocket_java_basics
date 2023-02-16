@@ -1,4 +1,4 @@
-package Lesson7.TemperatureConverter;
+package Lesson7.TemperatureConverter.Requests;
 
 import java.util.Objects;
 

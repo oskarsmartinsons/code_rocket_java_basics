@@ -1,4 +1,7 @@
-package Lesson7.TemperatureConverter;
+package Lesson7.TemperatureConverter.Services;
+
+import Lesson7.TemperatureConverter.Requests.TemperatureRequest;
+import Lesson7.TemperatureConverter.VerificationDetails;
 
 public class TemperatureVerificationService {
     private final TemperatureConversionService temperatureConversionService;

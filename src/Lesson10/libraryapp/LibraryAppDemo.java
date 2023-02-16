@@ -25,6 +25,7 @@ public class LibraryAppDemo {
         menuActionList.add(new CreateBookMenuAction(bookService));
         menuActionList.add(new FindAuthorByIdMenuAction(authorService));
         menuActionList.add(new FindBookMenuAction(bookService));
+        menuActionList.add(new AddBookInAuthorsListMenuAction(authorService, bookService));
         menuActionList.add(new ExitMenuAction());
 
         UserMenu userMenu = new UserMenu(menuActionList);

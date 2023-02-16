@@ -1,7 +1,9 @@
 package Lesson7.TemperatureConverter;
 
-public interface TemperatureFormula {
-    boolean isProperFormula(FormulaDetails formulaDetails);
+import Lesson7.TemperatureConverter.Requests.FormulaDetailsRequest;
 
-    String display(FormulaDetails formulaDetails);
+public interface TemperatureFormula {
+    boolean isProperFormula(FormulaDetailsRequest formulaDetails);
+
+    String display(FormulaDetailsRequest formulaDetails);
 }

@@ -1,16 +1,16 @@
-package Lesson7.TemperatureConverter;
+package Lesson7.TemperatureConverter.Requests;
 
 import java.util.Date;
 import java.util.Objects;
 
-public class ConversionHistory {
+public class ConversionHistoryRequest {
     private char unitFrom;
     private double tempFrom;
     private char unitTo;
     private double tempTo;
     private Date time;
 
-    public ConversionHistory(char unitFrom, double tempFrom, char unitTo, double tempTo, Date time) {
+    public ConversionHistoryRequest(char unitFrom, double tempFrom, char unitTo, double tempTo, Date time) {
         this.unitFrom = unitFrom;
         this.tempFrom = tempFrom;
         this.unitTo = unitTo;
@@ -42,7 +42,7 @@ public class ConversionHistory {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        ConversionHistory that = (ConversionHistory) o;
+        ConversionHistoryRequest that = (ConversionHistoryRequest) o;
         return unitFrom == that.unitFrom && Double.compare(that.tempFrom, tempFrom) == 0 && unitTo == that.unitTo && Double.compare(that.tempTo, tempTo) == 0 && Objects.equals(time, that.time);
     }
 

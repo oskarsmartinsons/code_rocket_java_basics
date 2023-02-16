@@ -21,16 +21,9 @@ public class BookService {
         this.authorService = authorService;
     }
 
-    public Book createBookWithAuthor(){
-        Author author = authorService.create();
-     //   AuthorDto savedAuthor = authorService.save(author);
-        Book book = userInput.inputBook();
-        book.setAuthor(author);
-        return book;
-    }
+    public Book create(){
+        return userInput.inputBook();
 
-    public void addAuthorToBook(Author author, Book book) {
-        book.setAuthor(author);
     }
 
     public BookDto save (Book book) {
@@ -47,4 +40,6 @@ public class BookService {
                 .map(bookDtoConverter::convert)
                 .collect(Collectors.toList());
     }
+
+
 }

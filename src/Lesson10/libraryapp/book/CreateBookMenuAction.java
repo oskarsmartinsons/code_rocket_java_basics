@@ -16,7 +16,7 @@ public class CreateBookMenuAction implements MenuAction {
 
     @Override
     public void execute() {
-        Book book = bookService.createBookWithAuthor();
+        Book book = bookService.create();
         BookDto bookDto = bookService.save(book);
         System.out.println("Saved book: " + bookDto);
     }

@@ -1,7 +1,8 @@
 package Lesson7.TemperatureConverter;
 
+import Lesson7.TemperatureConverter.ActionImplementations.ActionMenu;
+
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class UserMenu {
     private final UserInput userInput;

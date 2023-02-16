@@ -18,6 +18,7 @@ public class FindBookMenuAction implements MenuAction {
 
     @Override
     public void execute() {
+        System.out.println("Input prefix for search:");
         List<BookDto> bookList = bookService.findAllBooksWithPrefix(bookService.inputPrefix());
         System.out.println("Search Results: " + bookList);
     }

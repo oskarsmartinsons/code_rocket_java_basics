@@ -1,4 +1,4 @@
-package Lesson7.TemperatureConverter;
+package Lesson7.TemperatureConverter.ActionImplementations;
 
 public class ActionExit implements ActionMenu{
     @Override

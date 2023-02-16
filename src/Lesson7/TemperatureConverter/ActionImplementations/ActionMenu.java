@@ -1,4 +1,4 @@
-package Lesson7.TemperatureConverter;
+package Lesson7.TemperatureConverter.ActionImplementations;
 
 public interface ActionMenu {
     String getAction();

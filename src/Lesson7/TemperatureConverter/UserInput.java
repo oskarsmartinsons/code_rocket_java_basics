@@ -1,9 +1,12 @@
 package Lesson7.TemperatureConverter;
 
+import Lesson7.TemperatureConverter.Requests.FormulaDetailsRequest;
+import Lesson7.TemperatureConverter.Requests.TemperatureRequest;
+
 import java.util.Scanner;
 
 public class UserInput {
-    TemperatureRequest inputRequest() {
+    public TemperatureRequest inputRequest() {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter unit FROM you want to convert:  C,K or F: ");
         String inputUnitFrom = input.next().toUpperCase();
@@ -15,24 +18,24 @@ public class UserInput {
         return new TemperatureRequest(inputTemp,inputUnitFrom.charAt(0), inputUnitTo.charAt(0));
     }
 
-    int inputActionNumber() {
+    public int inputActionNumber() {
         System.out.println("-----------------------------");
         System.out.println("Please enter action number: ");
         Scanner input = new Scanner(System.in);
         return input.nextInt();
     }
 
-    FormulaDetails inputFormulaDetails() {
+    public FormulaDetailsRequest inputFormulaDetails() {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter unit FROM you want to convert:  C,K or F: ");
         String inputUnitFrom = input.next().toUpperCase();
         System.out.println("Enter unit TO you want to convert:  C,K or F: ");
         String inputUnitTo = input.next().toUpperCase();
 
-        return new FormulaDetails(inputUnitFrom.charAt(0), inputUnitTo.charAt(0));
+        return new FormulaDetailsRequest(inputUnitFrom.charAt(0), inputUnitTo.charAt(0));
     }
 
-    VerificationDetails inputVerificationDetails() {
+    public VerificationDetails inputVerificationDetails() {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter unit FROM you want to verify:  C,K or F: ");
         String inputUnitFrom = input.next().toUpperCase();

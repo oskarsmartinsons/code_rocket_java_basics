@@ -1,4 +1,7 @@
-package Lesson7.TemperatureConverter;
+package Lesson7.TemperatureConverter.Services;
+
+import Lesson7.TemperatureConverter.TemperatureConverter;
+import Lesson7.TemperatureConverter.Requests.TemperatureRequest;
 
 import java.util.ArrayList;
 

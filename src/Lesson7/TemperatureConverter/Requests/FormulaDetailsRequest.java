@@ -1,11 +1,11 @@
-package Lesson7.TemperatureConverter;
+package Lesson7.TemperatureConverter.Requests;
 
 import java.util.Objects;
 
-public class FormulaDetails {
+public class FormulaDetailsRequest {
     private final char unitFrom;
     private final char unitTo;
-    public FormulaDetails(char unitFrom, char unitTo) {
+    public FormulaDetailsRequest(char unitFrom, char unitTo) {
         this.unitFrom = unitFrom;
         this.unitTo = unitTo;
     }
@@ -22,7 +22,7 @@ public class FormulaDetails {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        FormulaDetails that = (FormulaDetails) o;
+        FormulaDetailsRequest that = (FormulaDetailsRequest) o;
         return unitFrom == that.unitFrom && unitTo == that.unitTo;
     }
 

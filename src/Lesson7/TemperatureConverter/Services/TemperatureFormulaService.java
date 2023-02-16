@@ -1,4 +1,7 @@
-package Lesson7.TemperatureConverter;
+package Lesson7.TemperatureConverter.Services;
+
+import Lesson7.TemperatureConverter.Requests.FormulaDetailsRequest;
+import Lesson7.TemperatureConverter.TemperatureFormula;
 
 import java.util.ArrayList;
 
@@ -7,7 +10,7 @@ public class TemperatureFormulaService {
     public TemperatureFormulaService(ArrayList<TemperatureFormula> formulas) {
         this.formulas = formulas;
     }
-    public void displayFormula(FormulaDetails formulaDetails) {
+    public void displayFormula(FormulaDetailsRequest formulaDetails) {
         for (TemperatureFormula formula : formulas) {
             if(formula.isProperFormula(formulaDetails)) {
                 String result = formula.display(formulaDetails);

@@ -1,7 +1,7 @@
 package Lesson7.TemperatureConverterTests;
 
 import Lesson7.TemperatureConverter.ConversionRuleFromKelvinToFahrenheit;
-import Lesson7.TemperatureConverter.TemperatureRequest;
+import Lesson7.TemperatureConverter.Requests.TemperatureRequest;
 
 public class ConversionRuleFromKelvinToFahrenheitTest {
 

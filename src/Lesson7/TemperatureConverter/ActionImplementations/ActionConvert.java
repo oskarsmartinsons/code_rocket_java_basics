@@ -1,4 +1,9 @@
-package Lesson7.TemperatureConverter;
+package Lesson7.TemperatureConverter.ActionImplementations;
+
+import Lesson7.TemperatureConverter.Requests.ConversionHistoryRequest;
+import Lesson7.TemperatureConverter.Services.TemperatureConversionService;
+import Lesson7.TemperatureConverter.Requests.TemperatureRequest;
+import Lesson7.TemperatureConverter.UserInput;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -6,7 +11,7 @@ import java.util.Date;
 public class ActionConvert implements ActionMenu{
     private final UserInput userInput;
     private final TemperatureConversionService temperatureConversionService;
-    public static ArrayList<ConversionHistory> allHistory = new ArrayList<>();
+    public static ArrayList<ConversionHistoryRequest> allHistory = new ArrayList<>();
 
     public ActionConvert(UserInput userInput, TemperatureConversionService temperatureConversionService) {
         this.userInput = userInput;
@@ -33,7 +38,7 @@ public class ActionConvert implements ActionMenu{
                 temperatureRequest.getUnitTo()
         );
 
-        ConversionHistory conversionHistory = new ConversionHistory(
+        ConversionHistoryRequest conversionHistory = new ConversionHistoryRequest(
                 temperatureRequest.getUnitFrom(),
                 temperatureRequest.getTemperature(),
                 temperatureRequest.getUnitTo(),
